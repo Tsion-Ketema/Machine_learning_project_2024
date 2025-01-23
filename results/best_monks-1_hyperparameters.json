@@ -1,0 +1,22 @@
+{
+    "hidden_layer_sizes": [
+        17,
+        12,
+        8,
+        4,
+        1
+    ],
+    "activations": [
+        "relu",
+        "relu",
+        "relu",
+        "sigmoid"
+    ],
+    "learning_rates": 0.05,
+    "batch_sizes": 8,
+    "weight_initialization": "xavier",
+    "momentum": 0.9,
+    "regularization": 5e-05,
+    "epochs": 1500,
+    "optimizer": "sgd"
+}
