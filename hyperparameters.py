@@ -22,28 +22,29 @@ class HyperparameterManager:
                 'optimizer': ['sgd', 'adam'],
                 'dropout_rate': [0.1, 0.2],
             },
+            # 'monks-1': {
+            #     'hidden_layer_sizes': [(17, 8, 4, 1)],
+            #     'activations': [('relu', 'relu', 'sigmoid')],
+            #     'learning_rates': [0.005, 0.01, 0.02],
+            #     'batch_sizes': [16, 32],
+            #     'weight_initialization': ['xavier', 'he'],
+            #     'momentum': [0.9],
+            #     'regularization': [0.00001, 0.0001],
+            #     'epochs': [1000],
+            #     'weight_decay': [0.00005]
+            # },
             'monks-1': {
-                'hidden_layer_sizes': [(17, 8, 4, 1)],  # Increase complexity
-                # Add more non-linearity
-                'activations': [('relu', 'relu', 'sigmoid')],
-                'learning_rates': [0.005, 0.01, 0.02],  # Add finer control
-                'batch_sizes': [16, 32],  # Increase for better generalization
-                'weight_initialization': ['xavier', 'he'],  # Keep both options
-                'momentum': [0.9],  # Slightly higher to retain learning trends
-                # Lower reg to avoid underfitting
-                'regularization': [0.00001, 0.0001],
-                'epochs': [1000],  # Increase training time
-                # Reduce regularization to allow flexibility
-                'weight_decay': [0.00005]
-                # 'hidden_layer_sizes': [(17, 4, 1)],
-                # 'activations': [('relu', 'sigmoid')],
-                # 'learning_rates': [0.01, 0.05],
-                # 'batch_sizes': [8, 16],
-                # 'weight_initialization': ['xavier', 'he'],
-                # 'momentum': [0.8],
-                # 'regularization': [0.0001, 0.00005],
-                # 'epochs': [500],
-                # 'weight_decay': [0.0001]  # Apply L2 regularization
+                # 2 options
+                'hidden_layer_sizes': [(17, 8, 4, 1), (17, 12, 6, 1)],
+                # 2 options
+                'activations': [('relu', 'relu', 'sigmoid'), ('relu', 'tanh', 'sigmoid')],
+                'learning_rates': [0.005, 0.01, 0.02],  # 3 options
+                'batch_sizes': [16, 32],  # 2 options
+                'weight_initialization': ['xavier', 'he'],  # 2 options
+                'momentum': [0.9],  # 1 option
+                'regularization': [0.00001, 0.0001],  # 2 options
+                'epochs': [1000],  # 1 option
+                'weight_decay': [0.00005],  # 1 option
             },
             'monks-2': {
                 'hidden_layer_sizes': [(17, 16, 12, 8, 1)],
@@ -56,17 +57,6 @@ class HyperparameterManager:
                 'epochs': [2000],
                 'optimizer': ['sgd'],
             },
-            # 'monks-3': {
-            #     'hidden_layer_sizes': [(17, 8, 4, 1)],
-            #     'activations': [('leaky_relu', 'relu', 'sigmoid')],
-            #     'learning_rates': [0.001, 0.005],
-            #     'batch_sizes': [32, 64],
-            #     'weight_initialization': ['he'],
-            #     'momentum': [0.8],
-            #     'regularization': [0.001, 0.005],
-            #     'epochs': [1000],
-            #     'optimizer': ['sgd'],
-            # }
             'monks-3': {
                 # Increase depth slightly
                 'hidden_layer_sizes': [(17, 12, 8, 4, 1)],

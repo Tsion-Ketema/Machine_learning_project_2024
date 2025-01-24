@@ -34,10 +34,11 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
     if "monk" in dataset_name:
         X_train, Y_train = load_and_preprocess_monk_dataset(train_file)
         X_test, Y_test = load_and_preprocess_monk_dataset(test_file)
+        # The encoded data will be returned here.
 
         # print(f"X_train shape: {X_train.shape}, X_test shape: {X_test.shape}")
-        # print("Sample X_train:", X_train[:5])
-        # print("Sample X_test:", X_test[:5])
+        print("Sample X_train:", X_train[:5])
+        print("Sample X_test:", X_test[:5])
 
         # common_samples = np.intersect1d(X_train, X_test)
         # print("Data Type after Conversion:", X_train.dtype, X_test.dtype)
@@ -92,7 +93,7 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
         with open(chosen_file, 'w') as f:
             json.dump(best_hyperparams_list[i], f, indent=4)
 
-    best_model = best_models[1]
+    best_model = best_models[0]
     test_loss, test_accuracy = evaluate_model(
         best_model, X_test, Y_test, task_type)
 
@@ -118,8 +119,8 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
 
 if __name__ == "__main__":
     # Configuration: choose dataset and parameters in one place
-    RUN_MONK = False  # Set to False to run CUP instead
-    MONK_VERSION = "monks-3"  # Choose among "monks-1", "monks-2", "monks-3"
+    RUN_MONK = True  # Set to False to run CUP instead
+    MONK_VERSION = "monks-1"  # Choose among "monks-1", "monks-2", "monks-3"
 
     if RUN_MONK:
         process_dataset(MONK_VERSION, f"datasets/monk/{MONK_VERSION}.train",

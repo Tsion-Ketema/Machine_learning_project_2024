@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 
 def load_and_preprocess_monk_dataset(file_path):
     """Load and preprocess the MONK dataset (train/test)."""
+    # One hot encoding is being done on the feature set not on the label part.
     data = pd.read_csv(file_path, sep=" ", names=[
                        'y1', 'x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'id']).set_index('id')
     return one_hot_encode_monk(data.drop(columns=['y1']).to_numpy()), data['y1'].to_numpy().reshape(-1, 1)
@@ -30,7 +31,6 @@ def one_hot_encode_monk(features):
                     f"Invalid feature value {val} for feature with range {num}")
             encoded_row.extend(one_hot)
         encoded.append(encoded_row)
-
     return np.array(encoded)
 
 
