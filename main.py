@@ -92,7 +92,7 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
         with open(chosen_file, 'w') as f:
             json.dump(best_hyperparams_list[i], f, indent=4)
 
-    best_model = best_models[0]
+    best_model = best_models[1]
     test_loss, test_accuracy = evaluate_model(
         best_model, X_test, Y_test, task_type)
 
@@ -116,35 +116,10 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
     best_model.save_model(best_model_file)
 
 
-def apply_blind_test(model_path, blind_test_path, output_folder="results"):
-    """Apply the selected best model to the blind test set and save predictions."""
-    print(f"[INFO] Applying blind test using model: {model_path}")
-
-    # Load the trained model
-    model = NeuralNetwork.load_model(model_path)
-
-    # Load and preprocess blind test dataset (remove first 7 rows, use 12 feature columns)
-    blind_test_data = pd.read_csv(
-        blind_test_path, sep=',', skiprows=7, header=None, usecols=range(1, 13,)
-    ).to_numpy()
-
-    print(f"[DEBUG] Blind test shape: {blind_test_data.shape}")
-
-    # Perform predictions
-    predictions = model.forward(blind_test_data)
-
-    # Save predictions to the results folder
-    os.makedirs(output_folder, exist_ok=True)
-    output_file = os.path.join(output_folder, "blind_test_predictions.csv")
-    np.savetxt(output_file, predictions, delimiter=",", fmt='%.6f')
-
-    print(f"[INFO] Blind test predictions saved to {output_file}")
-
-
 if __name__ == "__main__":
     # Configuration: choose dataset and parameters in one place
-    RUN_MONK = True  # Set to False to run CUP instead
-    MONK_VERSION = "monks-1"  # Choose among "monks-1", "monks-2", "monks-3"
+    RUN_MONK = False  # Set to False to run CUP instead
+    MONK_VERSION = "monks-3"  # Choose among "monks-1", "monks-2", "monks-3"
 
     if RUN_MONK:
         process_dataset(MONK_VERSION, f"datasets/monk/{MONK_VERSION}.train",
