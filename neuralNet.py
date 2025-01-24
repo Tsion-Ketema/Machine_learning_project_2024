@@ -96,6 +96,14 @@ class NeuralNetwork:
 
     def train(self, X, y, X_val=None, y_val=None):
         """Train the neural network with the provided data."""
+
+        # Check if validation data is passed
+        # if X_val is None or y_val is None:
+        #     print("[INFO] No validation data provided.")
+        # else:
+        #     print(
+        #         f"[INFO] Validation data provided. X_val shape: {X_val.shape}, y_val shape: {y_val.shape}")
+
         for epoch in range(self.epochs):
             self.forward(X)
             grads_w, grads_b = self.backward(X, y)

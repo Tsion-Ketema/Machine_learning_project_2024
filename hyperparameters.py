@@ -23,15 +23,15 @@ class HyperparameterManager:
                 'dropout_rate': [0.1, 0.2],
             },
             'monks-1': {
-                'hidden_layer_sizes': [(17, 12, 8, 4, 1)],
-                'activations': [('relu', 'relu', 'relu', 'sigmoid')],
+                'hidden_layer_sizes': [(17, 4, 1)],
+                'activations': [('relu', 'sigmoid')],
                 'learning_rates': [0.01, 0.05],
                 'batch_sizes': [8, 16],
                 'weight_initialization': ['xavier', 'he'],
-                'momentum': [0.9],
+                'momentum': [0.8],
                 'regularization': [0.0001, 0.00005],
-                'epochs': [1500],
-                'optimizer': ['sgd'],
+                'epochs': [500],
+                'weight_decay': [0.0001]  # Apply L2 regularization
             },
             'monks-2': {
                 'hidden_layer_sizes': [(17, 16, 12, 8, 1)],

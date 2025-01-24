@@ -28,6 +28,10 @@ def train_model(train_data, val_data, config, task_type):
         activations=activations,
         task_type=task_type
     )
+    # if X_vl is not None and Y_vl is not None:
+    #     print("Validation data is available, proceeding with training...")
+    # else:
+    #     print("Validation data is NOT available, skipping validation...")
 
     model.train(X_tr, Y_tr, X_val=X_vl, y_val=Y_vl)
     return model

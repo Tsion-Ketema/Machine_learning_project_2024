@@ -33,8 +33,39 @@ def evaluate_model(model, X, y, task_type):
 
     accuracy = None  # Default to None for regression
     if task_type == 'classification':
-        accuracy = np.mean(np.argmax(y_pred, axis=1) ==
-                           np.argmax(y, axis=1)) * 100
+        # print("Predicted Probabilities:", y_pred[:10].flatten())
+        # print("Predicted Binary Labels:",
+        #       (y_pred >= 0.5).astype(int)[:10].flatten())
+        # print("Actual Labels:", y.flatten()[:10])
+
+        # Predicted Probabilities:
+        y_pred[:10].flatten()
+        # Predicted Binary Labels:"
+        (y_pred >= 0.5).astype(int)[:10].flatten()
+        # Actual Labels:"
+        y.flatten()[:10]
+
+        # Ensure binary classification thresholding
+        y_pred_labels = (y_pred >= 0.5).astype(int)
+        accuracy = np.mean(y_pred_labels.flatten() == y.flatten()) * 100
+
+        # print("Predicted Labels:", y_pred_labels[:10])
+        # print("Actual Labels:", y.flatten()[:10])
+
+        y_pred_labels = y_pred_labels.flatten()
+        y_true = y.flatten()
+
+        accuracy_debug = np.mean(y_pred_labels == y_true) * 100
+
+        # print("Corrected Accuracy Calculation:", accuracy_debug)
+
+        # print("Accuracy Calculation:", np.mean(
+        #     y_pred_labels == y.flatten()) * 100)
+
+        # Evaluate on the entire test set
+        y_pred_full = (model.forward(X) >= 0.5).astype(int)
+        accuracy_full = np.mean(y_pred_full.flatten() == y.flatten()) * 100
+        # print(f"Full Test Accuracy: {accuracy_full}%")
 
     return loss, accuracy
 

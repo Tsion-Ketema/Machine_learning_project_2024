@@ -35,6 +35,19 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
         X_train, Y_train = load_and_preprocess_monk_dataset(train_file)
         X_test, Y_test = load_and_preprocess_monk_dataset(test_file)
 
+        # print(f"X_train shape: {X_train.shape}, X_test shape: {X_test.shape}")
+        # print("Sample X_train:", X_train[:5])
+        # print("Sample X_test:", X_test[:5])
+
+        # common_samples = np.intersect1d(X_train, X_test)
+        # print("Data Type after Conversion:", X_train.dtype, X_test.dtype)
+
+        # if len(common_samples) > 0:
+        #     print(
+        #         f"Data Leakage Detected! {len(common_samples)} samples are duplicated in train and test sets.")
+        # else:
+        #     print("No data leakage detected. Train and test sets are unique.")
+
         # Setup directories for monk datasets using original names
         paths = setup_directories("monk_hyperparameters", [
                                   "monks-1", "monks-2", "monks-3"])
@@ -82,6 +95,9 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
     best_model = best_models[0]
     test_loss, test_accuracy = evaluate_model(
         best_model, X_test, Y_test, task_type)
+
+    # print(X_test.shape, X_train.shape)
+    # print(Y_test[:5])  # Check a few sample labels
 
     if test_accuracy is not None:
         print(
