@@ -86,12 +86,15 @@ class NeuralNetwork:
         grads_w, grads_b = [], []
         delta = dLoss_dYpred
         for i in reversed(range(len(self.weights))):
+            reg_term = self.regularization * \
+                self.weights[i] if self.regularization else 0
             grads_w.insert(
-                0, np.dot(self.a_cache[i].T, delta) + self.regularization * self.weights[i])
+                0, np.dot(self.a_cache[i].T, delta) + reg_term)
             grads_b.insert(0, np.sum(delta, axis=0, keepdims=True))
             if i > 0:
                 delta = np.dot(
                     delta, self.weights[i].T) * self.derivative_functions[i - 1](self.z_cache[i - 1])
+
         return grads_w, grads_b
 
     def train(self, X, y, X_val=None, y_val=None):
@@ -115,6 +118,8 @@ class NeuralNetwork:
                     self.velocity_b[i] - self.learning_rate * grads_b[i]
                 self.weights[i] += self.velocity_w[i]
                 self.biases[i] += self.velocity_b[i]
+                # print(f"Epoch {epoch+1} - First few weights:",
+                #       self.weights[0][:5])  # Debugging weight updates
 
             # Store train loss and accuracy
             train_loss = self.compute_loss(y, self.forward(X))

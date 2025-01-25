@@ -22,59 +22,59 @@ class HyperparameterManager:
                 'optimizer': ['sgd', 'adam'],
                 'dropout_rate': [0.1, 0.2],
             },
-            # 'monks-1': {
-            #     'hidden_layer_sizes': [(17, 8, 4, 1)],
-            #     'activations': [('relu', 'relu', 'sigmoid')],
-            #     'learning_rates': [0.005, 0.01, 0.02],
-            #     'batch_sizes': [16, 32],
-            #     'weight_initialization': ['xavier', 'he'],
-            #     'momentum': [0.9],
-            #     'regularization': [0.00001, 0.0001],
-            #     'epochs': [1000],
-            #     'weight_decay': [0.00005]
-            # },
             'monks-1': {
-                # 2 options
-                'hidden_layer_sizes': [(17, 8, 4, 1), (17, 12, 6, 1)],
-                # 2 options
-                'activations': [('relu', 'relu', 'sigmoid'), ('relu', 'tanh', 'sigmoid')],
-                'learning_rates': [0.005, 0.01, 0.02],  # 3 options
-                'batch_sizes': [16, 32],  # 2 options
-                'weight_initialization': ['xavier', 'he'],  # 2 options
-                'momentum': [0.9],  # 1 option
-                'regularization': [0.00001, 0.0001],  # 2 options
-                'epochs': [1000],  # 1 option
-                'weight_decay': [0.00005],  # 1 option
+                'hidden_layer_sizes': [
+                    (17, 4, 1),  # Simplest architecture
+                    (17, 8, 4, 1),  # Moderate complexity
+                    (17, 12, 6, 1),  # Increased capacity
+                    (17, 16, 8, 4, 1)  # More depth
+                ],  # (4 options)
+
+                'activations': [
+                    ('relu', 'sigmoid'),  # Standard choice
+                    ('relu', 'relu', 'sigmoid'),
+                    ('tanh', 'tanh', 'sigmoid'),
+                    ('leaky_relu', 'relu', 'sigmoid')
+                ],  # (4 options)
+                'learning_rates': [0.001, 0.005, 0.01],  # (3 options)
+                # 'batch_sizes': [8, 16, 32],  # (3 options)
+                'weight_initialization': ['xavier', 'he'],  # (2 options)
+                'momentum': [0.8, 0.9],  # (2 options)
+                # (2 options - test with and without)
+                'regularization': [0, 0.0001],
+                'epochs': [1000],  # (1 option)
+                'weight_decay': [0, 0.00005]  # (2 options)
             },
+
             'monks-2': {
-                'hidden_layer_sizes': [(17, 16, 12, 8, 1)],
-                'activations': [('relu', 'relu', 'tanh', 'sigmoid')],
+                'hidden_layer_sizes': [(17, 8, 1)],
+                'activations': [('relu', 'sigmoid')],
                 'learning_rates': [0.005, 0.01],
-                'batch_sizes': [16, 32],
+                # 'batch_sizes': [16, 32],
                 'weight_initialization': ['xavier'],
                 'momentum': [0.95],
-                'regularization': [0.00001, 0.0001],
-                'epochs': [2000],
-                'optimizer': ['sgd'],
+                'epochs': [500],
             },
             'monks-3': {
-                # Increase depth slightly
-                'hidden_layer_sizes': [(17, 12, 8, 4, 1)],
-                # Use more ReLU for stable learning
-                'activations': [('relu', 'relu', 'relu', 'sigmoid')],
-                # Include a higher learning rate for faster convergence
-                'learning_rates': [0.001, 0.005, 0.01],
-                # Increase batch sizes for stability
-                'batch_sizes': [32, 64, 128],
-                # He initialization suits deep networks
-                'weight_initialization': ['he'],
-                # Increase momentum for faster convergence
-                'momentum': [0.85, 0.9],
-                # Moderate L2 regularization to avoid overfitting
-                'regularization': [0.0001, 0.0005],
-                # Increase training iterations for fine-tuning
-                'epochs': [1500],
+                'hidden_layer_sizes': [
+                    (17, 10, 6, 3, 1),
+                    (17, 8, 4, 2, 1)
+                ],
+                'activations': [
+                    ('relu', 'relu', 'tanh', 'sigmoid'),
+                    ('leaky_relu', 'relu', 'relu', 'sigmoid')
+                ],
+
+                'learning_rates': [0.0005, 0.001, 0.002],
+                'batch_sizes': [64, 128, 256],
+                'weight_initialization': ['xavier', 'he'],
+                'momentum': [0.7, 0.8],
+                'regularization': [0.0005, 0.001, 0.005],
+                'epochs': [2000],
+                'weight_decay': [0.0001, 0.0005],
+                'dropout_rate': [0.1, 0.2]
             }
+
 
         }
         self.dataset_context = None

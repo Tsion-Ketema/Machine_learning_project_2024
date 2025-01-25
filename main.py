@@ -36,18 +36,21 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
         X_test, Y_test = load_and_preprocess_monk_dataset(test_file)
         # The encoded data will be returned here.
 
-        # print(f"X_train shape: {X_train.shape}, X_test shape: {X_test.shape}")
+        print(f"X_train shape: {X_train.shape}, X_test shape: {X_test.shape}")
         print("Sample X_train:", X_train[:5])
         print("Sample X_test:", X_test[:5])
 
-        # common_samples = np.intersect1d(X_train, X_test)
-        # print("Data Type after Conversion:", X_train.dtype, X_test.dtype)
+        unique_values = np.unique(X_train, axis=0)
+        print(f"Number of unique samples in X_train: {len(unique_values)}")
 
-        # if len(common_samples) > 0:
-        #     print(
-        #         f"Data Leakage Detected! {len(common_samples)} samples are duplicated in train and test sets.")
-        # else:
-        #     print("No data leakage detected. Train and test sets are unique.")
+        common_samples = np.intersect1d(X_train, X_test)
+        print("Data Type after Conversion:", X_train.dtype, X_test.dtype)
+
+        if len(common_samples) > 0:
+            print(
+                f"Data Leakage Detected! {len(common_samples)} samples are duplicated in train and test sets.")
+        else:
+            print("No data leakage detected. Train and test sets are unique.")
 
         # Setup directories for monk datasets using original names
         paths = setup_directories("monk_hyperparameters", [
@@ -120,11 +123,11 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
 if __name__ == "__main__":
     # Configuration: choose dataset and parameters in one place
     RUN_MONK = True  # Set to False to run CUP instead
-    MONK_VERSION = "monks-1"  # Choose among "monks-1", "monks-2", "monks-3"
+    MONK_VERSION = "monks-2"  # Choose among "monks-1", "monks-2", "monks-3"
 
     if RUN_MONK:
         process_dataset(MONK_VERSION, f"datasets/monk/{MONK_VERSION}.train",
-                        f"datasets/monk/{MONK_VERSION}.test", n_folds=3, task_type='classification')
+                        f"datasets/monk/{MONK_VERSION}.test", n_folds=5, task_type='classification')
     else:
         process_dataset("cup", "CUP-DEV-SET.csv",
                         n_folds=5, task_type='regression')
