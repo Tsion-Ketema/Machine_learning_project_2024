@@ -10,6 +10,53 @@ class HyperparameterManager:
     def __init__(self):
         # Define hyperparameters for CUP and MONK datasets
         self.hyperparameters = {
+            # 'cup': {
+            #     'hidden_layer_sizes': [(12, 8, 3), (12, 16, 8, 3)],
+            #     'activations': [('relu', 'identity'), ('leaky_relu', 'leaky_relu', 'identity')],
+            #     'learning_rates': [0.0001, 0.001],
+            #     'batch_sizes': [8, 16],
+            #     'weight_initialization': ['he', 'xavier'],
+            #     'momentum': [0.2, 0.8],
+            #     'regularization': [0.0001, 0.001, 0.01],
+            #     'epochs': [1000],
+            #     'dropout_rate': [0.1, 0.2],
+            # },
+            # 'monks-1': {
+            #     'hidden_layer_sizes': [
+            #         (17, 4, 1),
+            #         (17, 8, 4, 1),
+            #         (17, 12, 6, 1),
+            #         (17, 16, 8, 4, 1)
+            #     ],
+            #     'activations': [
+            #         ('relu', 'sigmoid'),
+            #         ('relu', 'relu', 'sigmoid'),
+            #         ('tanh', 'tanh', 'sigmoid'),
+            #         ('leaky_relu', 'relu', 'sigmoid')
+            #     ],
+            #     'learning_rates': [0.001, 0.005, 0.01],
+            #     'weight_initialization': ['xavier', 'he'],
+            #     'momentum': [0.8, 0.9],
+            #     'epochs': [1000],
+            #     'weight_decay': [0, 0.00005]
+            # },
+            # 'monks-2': {
+            #     'hidden_layer_sizes': [(17, 8, 1), (17, 16, 1), (17, 8, 8, 1)],
+            #     'activations': [('relu', 'sigmoid'), ('tanh', 'sigmoid')],
+            #     'learning_rates': [0.001, 0.005, 0.01],
+            #     'weight_initialization': ['xavier', 'he'],
+            #     'momentum': [0.9, 0.95, 0.99],
+            #     'epochs': [500],
+            # },
+            # 'monks-3': {
+            #     'hidden_layer_sizes': [(17, 8, 1), (17, 16, 1), (17, 8, 8, 1)],
+            #     'activations': [('relu', 'sigmoid'), ('tanh', 'sigmoid')],
+            #     'learning_rates': [0.001, 0.005, 0.01],
+            #     'weight_initialization': ['xavier', 'he'],
+            #     'momentum': [0.9, 0.95, 0.99],
+            #     'epochs': [500],
+            #     'regularization': [0.0001, 0.0005],
+            # },
             'cup': {
                 'hidden_layer_sizes': [(12, 8, 3), (12, 16, 8, 3)],
                 'activations': [('relu', 'identity'), ('leaky_relu', 'leaky_relu', 'identity')],
@@ -17,54 +64,38 @@ class HyperparameterManager:
                 'batch_sizes': [8, 16],
                 'weight_initialization': ['he', 'xavier'],
                 'momentum': [0.2, 0.8],
-                'regularization': [0.0001, 0.001, 0.01],
+                # Add L1 and L2 regularization options
+                'regularization': [('L1', 0.0001), ('L2', 0.001)],
                 'epochs': [1000],
-                'optimizer': ['sgd', 'adam'],
                 'dropout_rate': [0.1, 0.2],
             },
             'monks-1': {
-                'hidden_layer_sizes': [
-                    (17, 4, 1),  # Simplest architecture
-                    (17, 8, 4, 1),  # Moderate complexity
-                    (17, 12, 6, 1),  # Increased capacity
-                    (17, 16, 8, 4, 1)  # More depth
-                ],  # (4 options)
-
-                'activations': [
-                    ('relu', 'sigmoid'),  # Standard choice
-                    ('relu', 'relu', 'sigmoid'),
-                    ('tanh', 'tanh', 'sigmoid'),
-                    ('leaky_relu', 'relu', 'sigmoid')
-                ],  # (4 options)
-                'learning_rates': [0.001, 0.005, 0.01],  # (3 options)
-                # 'batch_sizes': [8, 16, 32],  # (3 options)
-                'weight_initialization': ['xavier', 'he'],  # (2 options)
-                'momentum': [0.8, 0.9],  # (2 options)
-                # (2 options - test with and without)
-                # 'regularization': [0, 0.0001],
-                'epochs': [1000],  # (1 option)
-                'weight_decay': [0, 0.00005]  # (2 options)
+                'hidden_layer_sizes': [(17, 4, 1), (17, 8, 4, 1), (17, 12, 6, 1), (17, 16, 8, 4, 1)],
+                'activations': [('relu', 'sigmoid'), ('relu', 'relu', 'sigmoid'), ('tanh', 'tanh', 'sigmoid')],
+                'learning_rates': [0.001, 0.005, 0.01],
+                'weight_initialization': ['xavier', 'he'],
+                'momentum': [0.8, 0.9],
+                'epochs': [1000],
+                'weight_decay': [0, 0.00005],  # No regularization
             },
             'monks-2': {
-                # 3 options
                 'hidden_layer_sizes': [(17, 8, 1), (17, 16, 1), (17, 8, 8, 1)],
-                # 2 options
                 'activations': [('relu', 'sigmoid'), ('tanh', 'sigmoid')],
-                'learning_rates': [0.001, 0.005, 0.01],  # 3 options
-                'weight_initialization': ['xavier', 'he'],  # 2 options
-                'momentum': [0.9, 0.95, 0.99],  # 3 options
-                'epochs': [500],  # 2 options
+                'learning_rates': [0.001, 0.005, 0.01],
+                'weight_initialization': ['xavier', 'he'],
+                'momentum': [0.9, 0.95, 0.99],
+                'epochs': [500],
+                # No regularization
             },
             'monks-3': {
-                # 3 options
                 'hidden_layer_sizes': [(17, 8, 1), (17, 16, 1), (17, 8, 8, 1)],
-                # 2 options
                 'activations': [('relu', 'sigmoid'), ('tanh', 'sigmoid')],
-                'learning_rates': [0.001, 0.005, 0.01],  # 3 options
-                'weight_initialization': ['xavier', 'he'],  # 2 options
-                'momentum': [0.9, 0.95, 0.99],  # 3 options
-                'epochs': [500],  # 2 options
-                'regularization': [0.0001, 0.0005],
+                'learning_rates': [0.001, 0.005, 0.01],
+                'weight_initialization': ['xavier', 'he'],
+                'momentum': [0.9, 0.95, 0.99],
+                'epochs': [500],
+                # Added options
+                'regularization': [('none', 0), ('L1', 0.0001), ('L2', 0.0005)],
             },
         }
         self.dataset_context = None

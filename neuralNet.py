@@ -4,18 +4,37 @@ from functions import activation_map
 
 
 class NeuralNetwork:
-    def __init__(self, hidden_layer_sizes, learning_rate, epochs, momentum,
-                 weight_initialization, regularization=0.0, activations=None, task_type='classification',
+    # def __init__(self, hidden_layer_sizes, learning_rate, epochs, momentum,
+    #              weight_initialization, regularization=0.0, activations=None, task_type='classification',
 
-                 ):
+    #              ):
+    #     self.hidden_layer_sizes = hidden_layer_sizes
+    #     self.learning_rate = learning_rate
+    #     self.epochs = epochs
+    #     self.momentum = momentum
+    #     self.weight_initialization = weight_initialization
+    #     # Apply regularization conditionally
+    #     self.regularization = regularization
+    #     self.task_type = task_type
+
+    #     self.activations = self._initialize_activations(activations)
+    #     self.activation_functions, self.derivative_functions = self._get_activation_functions()
+
+    #     self._initialize_parameters()
+    #     self.train_losses, self.val_losses = [], []
+    #     self.train_accuracies, self.val_accuracies = ([] if self.task_type == 'classification' else None,
+    #                                                   [] if self.task_type == 'classification' else None)
+
+    def __init__(self, hidden_layer_sizes, learning_rate, epochs, momentum,
+                 weight_initialization, regularization=None, activations=None, task_type='classification'):
         self.hidden_layer_sizes = hidden_layer_sizes
         self.learning_rate = learning_rate
         self.epochs = epochs
         self.momentum = momentum
         self.weight_initialization = weight_initialization
-        # Apply regularization conditionally
-        self.regularization = regularization
         self.task_type = task_type
+        self.regularization = regularization or (
+            'none', 0)  # Default no regularization
 
         self.activations = self._initialize_activations(activations)
         self.activation_functions, self.derivative_functions = self._get_activation_functions()
@@ -68,31 +87,71 @@ class NeuralNetwork:
             self.a_cache.append(act(z))
         return self.a_cache[-1]
 
+    # def compute_loss(self, y_true, y_pred):
+    #     """Compute loss (MSE for classification, MEE for regression)."""
+    #     diff = y_true - y_pred
+    #     if self.task_type == 'classification':
+    #         # Mean Squared Error (MSE) for classification tasks
+    #         return np.mean(np.sum(diff ** 2, axis=1))
+    #     else:
+    #         # Mean Euclidean Error (MEE) for regression tasks, with numerical stability
+    #         return np.mean(np.sqrt(np.sum(diff ** 2, axis=1) + 1e-12))
+
     def compute_loss(self, y_true, y_pred):
-        """Compute loss (MSE for classification, MEE for regression)."""
+        """Compute loss with optional L1 or L2 regularization."""
         diff = y_true - y_pred
-        if self.task_type == 'classification':
-            # Mean Squared Error (MSE) for classification tasks
-            return np.mean(np.sum(diff ** 2, axis=1))
+        loss = np.mean(np.sum(diff ** 2, axis=1))  # MSE
+
+        if self.regularization[0] == 'L1':
+            reg_term = self.regularization[1] * \
+                sum(np.sum(np.abs(w)) for w in self.weights)
+        elif self.regularization[0] == 'L2':
+            reg_term = self.regularization[1] * \
+                sum(np.sum(w ** 2) for w in self.weights)
         else:
-            # Mean Euclidean Error (MEE) for regression tasks, with numerical stability
-            return np.mean(np.sqrt(np.sum(diff ** 2, axis=1) + 1e-12))
+            reg_term = 0
+
+        return loss + reg_term
+
+    # def backward(self, X, y_true):
+    #     """Perform backward propagation to compute gradients."""
+    #     m = X.shape[0]
+    #     y_pred = self.a_cache[-1]
+    #     diff = y_pred - y_true
+    #     dLoss_dYpred = (2 * diff / m) if self.task_type == 'classification' else diff / \
+    #         (np.sqrt(np.sum(diff**2, axis=1, keepdims=True)) + 1e-12) / m
+
+    #     grads_w, grads_b = [], []
+    #     delta = dLoss_dYpred
+    #     for i in reversed(range(len(self.weights))):
+    #         reg_term = self.regularization * \
+    #             self.weights[i] if self.regularization else 0
+    #         grads_w.insert(
+    #             0, np.dot(self.a_cache[i].T, delta) + reg_term)
+    #         grads_b.insert(0, np.sum(delta, axis=0, keepdims=True))
+    #         if i > 0:
+    #             delta = np.dot(
+    #                 delta, self.weights[i].T) * self.derivative_functions[i - 1](self.z_cache[i - 1])
+
+    #     return grads_w, grads_b
 
     def backward(self, X, y_true):
-        """Perform backward propagation to compute gradients."""
+        """Compute gradients including L1 or L2 regularization if applicable."""
         m = X.shape[0]
-        y_pred = self.a_cache[-1]
+        y_pred = self.forward(X)
         diff = y_pred - y_true
-        dLoss_dYpred = (2 * diff / m) if self.task_type == 'classification' else diff / \
-            (np.sqrt(np.sum(diff**2, axis=1, keepdims=True)) + 1e-12) / m
+        dLoss_dYpred = (2 * diff / m)
 
         grads_w, grads_b = [], []
         delta = dLoss_dYpred
         for i in reversed(range(len(self.weights))):
-            reg_term = self.regularization * \
-                self.weights[i] if self.regularization else 0
-            grads_w.insert(
-                0, np.dot(self.a_cache[i].T, delta) + reg_term)
+            reg_term = 0
+            if self.regularization[0] == 'L1':
+                reg_term = self.regularization[1] * np.sign(self.weights[i])
+            elif self.regularization[0] == 'L2':
+                reg_term = 2 * self.regularization[1] * self.weights[i]
+
+            grads_w.insert(0, np.dot(self.a_cache[i].T, delta) + reg_term)
             grads_b.insert(0, np.sum(delta, axis=0, keepdims=True))
             if i > 0:
                 delta = np.dot(

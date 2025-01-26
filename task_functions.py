@@ -26,7 +26,7 @@ def train_model(train_data, val_data, config, task_type):
         epochs=config['epochs'],
         momentum=config['momentum'],
         weight_initialization=config['weight_initialization'],
-        regularization=regularization,
+        regularization=config.get('regularization', ('none', 0)),
         activations=activations,
         task_type=task_type
     )

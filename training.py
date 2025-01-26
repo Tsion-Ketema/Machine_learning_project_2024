@@ -184,24 +184,80 @@ def plot_training_curve(model, dataset_name, plot_path=None, task_type=None):
         print(f"[ERROR] Failed to save plot: {e}")
 
 
+# def cross_validate_and_train(training_data, validation_data, hyperparams, task_function, train_file, n_folds=5, task_type='classification'):
+#     """Perform cross-validation to find the best hyperparameters."""
+#     X_dev, Y_dev = training_data
+#     dataset_name = extract_dataset_name(train_file)
+#     fold_splits = manual_kfold_split(X_dev, Y_dev, n_folds)
+
+#     print(
+#         f"\n[INFO] Performing {n_folds}-Fold CV on {len(hyperparams)} hyperparam combos for {dataset_name}...\n")
+
+#     results = []
+#     for config in tqdm(hyperparams, desc="Hyperparam combos"):
+#         fold_losses, model_for_config = [], None
+
+#         for fold_num, (train_idx, val_idx) in enumerate(fold_splits):
+#             X_train_cv, Y_train_cv = X_dev[train_idx], Y_dev[train_idx]
+#             X_val_cv, Y_val_cv = X_dev[val_idx], Y_dev[val_idx]
+
+#             # we are sending the 1st fold training and validation fold extracted features and labels
+#             model = task_function((X_train_cv, Y_train_cv),
+#                                   (X_val_cv, Y_val_cv), config)
+#             loss, accuracy = evaluate_model(
+#                 model, X_val_cv, Y_val_cv, task_type)
+#             fold_losses.append(loss)
+#             model_for_config = model
+
+#         avg_loss = np.mean(fold_losses)
+#         results.append(
+#             {"hyperparams": config, "avg_loss": avg_loss, "model": model_for_config})
+
+#     top_results = sorted(results, key=lambda x: x['avg_loss'])[:3]
+#     best_models, best_hyperparams = zip(
+#         *[(res["model"], res["hyperparams"]) for res in top_results])
+
+#     print("\n[Top 3 Models Based on Validation Loss]")
+#     for rank, res in enumerate(top_results, 1):
+#         print(f"[Rank {rank}] Loss: {res['avg_loss']:.4f}")
+
+#     print(
+#         f"\n[Summary] Total Hyperparameter Combos: {len(hyperparams)}, Total Folds: {n_folds}, Total Iterations: {len(hyperparams) * n_folds}")
+
+#     return best_models, best_hyperparams
+
 def cross_validate_and_train(training_data, validation_data, hyperparams, task_function, train_file, n_folds=5, task_type='classification'):
-    """Perform cross-validation to find the best hyperparameters."""
+    """Perform cross-validation to find the best hyperparameters, considering regularization."""
+
     X_dev, Y_dev = training_data
     dataset_name = extract_dataset_name(train_file)
     fold_splits = manual_kfold_split(X_dev, Y_dev, n_folds)
 
     print(
-        f"\n[INFO] Performing {n_folds}-Fold CV on {len(hyperparams)} hyperparam combos for {dataset_name}...\n")
+        f"\n[INFO] Performing {n_folds}-Fold CV on {len(hyperparams)} hyperparam combos for {dataset_name}...\n"
+    )
 
     results = []
     for config in tqdm(hyperparams, desc="Hyperparam combos"):
         fold_losses, model_for_config = [], None
 
+        # Handle regularization for specific datasets
+        if dataset_name in ["monks-3", "cup"]:
+            reg_type = config.get('regularization_type', 'none')
+            reg_value = config.get('regularization', 0)
+        else:
+            reg_type = 'none'
+            reg_value = 0
+
         for fold_num, (train_idx, val_idx) in enumerate(fold_splits):
             X_train_cv, Y_train_cv = X_dev[train_idx], Y_dev[train_idx]
             X_val_cv, Y_val_cv = X_dev[val_idx], Y_dev[val_idx]
 
-            # we are sending the 1st fold training and validation fold extracted features and labels
+            # Updating the configuration to include the chosen regularization settings
+            config['regularization_type'] = reg_type
+            config['regularization'] = reg_value
+
+            # Train the model with current hyperparameters and regularization
             model = task_function((X_train_cv, Y_train_cv),
                                   (X_val_cv, Y_val_cv), config)
             loss, accuracy = evaluate_model(
@@ -213,15 +269,19 @@ def cross_validate_and_train(training_data, validation_data, hyperparams, task_f
         results.append(
             {"hyperparams": config, "avg_loss": avg_loss, "model": model_for_config})
 
+    # Sort by lowest validation loss and select top 3 models
     top_results = sorted(results, key=lambda x: x['avg_loss'])[:3]
-    best_models, best_hyperparams = zip(
-        *[(res["model"], res["hyperparams"]) for res in top_results])
+
+    # Prepare output as lists
+    best_models = [res["model"] for res in top_results]
+    best_hyperparams = [res["hyperparams"] for res in top_results]
 
     print("\n[Top 3 Models Based on Validation Loss]")
     for rank, res in enumerate(top_results, 1):
-        print(f"[Rank {rank}] Loss: {res['avg_loss']:.4f}")
+        print(f"[Rank {rank}] Loss: {res['avg_loss']:.6f}")
 
     print(
-        f"\n[Summary] Total Hyperparameter Combos: {len(hyperparams)}, Total Folds: {n_folds}, Total Iterations: {len(hyperparams) * n_folds}")
+        f"\n[Summary] Total Hyperparameter Combos: {len(hyperparams)}, Total Folds: {n_folds}, Total Iterations: {len(hyperparams) * n_folds}"
+    )
 
     return best_models, best_hyperparams

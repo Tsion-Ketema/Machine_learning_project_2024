@@ -16,7 +16,7 @@ def setup_directories(base_folder, subfolders):
     return {name: os.makedirs(os.path.join(base_folder, name), exist_ok=True) or os.path.join(base_folder, name)
             for name in subfolders}
 
-# ***************** Initiating hyperparamter combination *****************
+# ***************** Initiating hyperparamter combination generating funciton *****************
 
 
 def generate_hyperparameters(dataset_name, config_file):
@@ -31,7 +31,7 @@ def generate_hyperparameters(dataset_name, config_file):
     with open(config_file, "r") as f:
         return json.load(f)
 
-# ***************** Load/setting up hyperparamters/ cross validation initiation *****************
+# ***************** Load dataset /setting up hyperparamters/ cross validation initiation *****************
 
 
 def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_type='classification'):
@@ -71,6 +71,40 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
         train_file, n_folds, task_type
     )
 
+    # Evaluate the prediction of the entire training and testing data using the best model#
+    best_model = best_models[0]
+    test_loss, test_accuracy = evaluate_model(
+        best_model, X_test, Y_test, task_type)
+
+    # Test the best model on the entire training and testing data
+    train_loss = best_model.compute_loss(Y_train, best_model.forward(X_train))
+    testt_loss = best_model.compute_loss(Y_test, best_model.forward(X_test))
+
+    print(f"Final Training Loss: {train_loss}")
+    print(f"Final Test Loss: {testt_loss}")
+
+    print("compare the result of this ", test_loss, "and ", testt_loss)
+
+    # Get model predictions
+    train_predictions = best_model.forward(X_train)
+    test_predictions = best_model.forward(X_test)
+
+    # Convert predictions to binary labels (classification threshold of 0.5)
+    train_predicted_labels = (train_predictions >= 0.5).astype(int)
+    test_predicted_labels = (test_predictions >= 0.5).astype(int)
+
+    # Compute accuracy
+    train_accuracy = np.mean(
+        train_predicted_labels.flatten() == Y_train.flatten()) * 100
+    test_accuracy = np.mean(
+        test_predicted_labels.flatten() == Y_test.flatten()) * 100
+
+    # Display accuracy
+    print(f"Training Accuracy: {train_accuracy:.2f}%")
+    print(f"Test Accuracy: {test_accuracy:.2f}%")
+
+    print("**************************************")
+
     # Plot only the best model (the first model in the sorted best_models list)
     best_model = best_models[0]  # Select the model with the lowest avg loss
     best_hyperparams = best_hyperparams_list[0]
@@ -99,38 +133,6 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
 
     print(f"[INFO] The best model plot saved to {plot_path}")
 
-    # *********To display the accuracy and the loss in the terminal**************#
-    best_model = best_models[0]
-    test_loss, test_accuracy = evaluate_model(
-        best_model, X_test, Y_test, task_type)
-
-    # Ensure correct dataset and model are used
-    train_loss = best_model.compute_loss(Y_train, best_model.forward(X_train))
-    test_loss = best_model.compute_loss(Y_test, best_model.forward(X_test))
-
-    print(f"Final Training Loss: {train_loss}")
-    print(f"Final Test Loss: {test_loss}")
-
-    # Get model predictions
-    train_predictions = best_model.forward(X_train)
-    test_predictions = best_model.forward(X_test)
-
-    # Convert predictions to binary labels (classification threshold of 0.5)
-    train_predicted_labels = (train_predictions >= 0.5).astype(int)
-    test_predicted_labels = (test_predictions >= 0.5).astype(int)
-
-    # Compute accuracy
-    train_accuracy = np.mean(
-        train_predicted_labels.flatten() == Y_train.flatten()) * 100
-    test_accuracy = np.mean(
-        test_predicted_labels.flatten() == Y_test.flatten()) * 100
-
-    # Display accuracy
-    print(f"Training Accuracy: {train_accuracy:.2f}%")
-    print(f"Test Accuracy: {test_accuracy:.2f}%")
-
-    print("**************************************")
-
     # Save final results
     os.makedirs("results", exist_ok=True)
     best_hp_file = os.path.join(
@@ -144,8 +146,8 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
 
 if __name__ == "__main__":
     # Configuration: choose dataset and parameters in one place
-    RUN_MONK = False  # Set to False to run CUP instead
-    MONK_VERSION = "monks-2"  # Choose among "monks-1", "monks-2", "monks-3"
+    RUN_MONK = True  # Set to False to run CUP instead
+    MONK_VERSION = "monks-1"  # Choose among "monks-1", "monks-2", "monks-3"
 
     if RUN_MONK:
         process_dataset(MONK_VERSION, f"datasets/monk/{MONK_VERSION}.train",
