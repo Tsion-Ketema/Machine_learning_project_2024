@@ -14,7 +14,7 @@
     "batch_sizes": 16,
     "weight_initialization": "he",
     "momentum": 0.8,
-    "regularization": 0.001,
+    "regularization": 0.0001,
     "epochs": 1000,
     "optimizer": "adam",
     "dropout_rate": 0.2

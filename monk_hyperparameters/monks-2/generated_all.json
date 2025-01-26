@@ -9,36 +9,6 @@
             "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
         "learning_rates": 0.001,
         "weight_initialization": "he",
         "momentum": 0.95,
@@ -55,67 +25,7 @@
             "sigmoid"
         ],
         "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
         "momentum": 0.99,
         "epochs": 500
     },
@@ -126,13 +36,73 @@
             1
         ],
         "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.01,
+        "weight_initialization": "he",
+        "momentum": 0.95,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.005,
+        "weight_initialization": "he",
+        "momentum": 0.95,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
             "tanh",
             "sigmoid"
         ],
         "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1000
+        "weight_initialization": "he",
+        "momentum": 0.99,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.001,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "tanh",
+            "sigmoid"
+        ],
+        "learning_rates": 0.005,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
@@ -161,23 +131,8 @@
         ],
         "learning_rates": 0.005,
         "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1000
+        "momentum": 0.9,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
@@ -191,52 +146,22 @@
         ],
         "learning_rates": 0.005,
         "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
         "momentum": 0.9,
         "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             17,
-            8,
+            16,
             1
         ],
         "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
+        "weight_initialization": "he",
+        "momentum": 0.95,
         "epochs": 500
     },
     {
@@ -257,21 +182,6 @@
     {
         "hidden_layer_sizes": [
             17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
             8,
             1
         ],
@@ -282,36 +192,6 @@
         "learning_rates": 0.01,
         "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.99,
         "epochs": 500
     },
     {
@@ -327,531 +207,6 @@
         "learning_rates": 0.01,
         "weight_initialization": "xavier",
         "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.9,
         "epochs": 500
     },
     {
@@ -876,157 +231,7 @@
             1
         ],
         "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
             "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
             "sigmoid"
         ],
         "learning_rates": 0.001,
@@ -1059,190 +264,10 @@
             "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
         "learning_rates": 0.001,
         "weight_initialization": "he",
         "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.95,
         "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1000
     },
     {
         "hidden_layer_sizes": [
@@ -1262,22 +287,22 @@
     {
         "hidden_layer_sizes": [
             17,
-            16,
+            8,
             1
         ],
         "activations": [
             "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
+        "learning_rates": 0.01,
+        "weight_initialization": "he",
+        "momentum": 0.99,
         "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             17,
-            8,
+            16,
             1
         ],
         "activations": [
@@ -1296,28 +321,13 @@
             1
         ],
         "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
+            "tanh",
             "sigmoid"
         ],
         "learning_rates": 0.005,
         "weight_initialization": "xavier",
         "momentum": 0.99,
-        "epochs": 1000
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
@@ -1330,9 +340,9 @@
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 1000
+        "weight_initialization": "he",
+        "momentum": 0.95,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
@@ -1359,24 +369,9 @@
             "tanh",
             "sigmoid"
         ],
-        "learning_rates": 0.005,
+        "learning_rates": 0.001,
         "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.9,
+        "momentum": 0.95,
         "epochs": 500
     },
     {
@@ -1389,25 +384,10 @@
             "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
         "learning_rates": 0.01,
         "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1000
+        "momentum": 0.95,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
@@ -1419,38 +399,38 @@
             "tanh",
             "sigmoid"
         ],
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
+        "momentum": 0.9,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "tanh",
+            "sigmoid"
+        ],
+        "learning_rates": 0.001,
+        "weight_initialization": "he",
+        "momentum": 0.99,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "tanh",
+            "sigmoid"
+        ],
         "learning_rates": 0.005,
         "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
         "momentum": 0.9,
         "epochs": 500
     },
@@ -1467,27 +447,12 @@
         "learning_rates": 0.001,
         "weight_initialization": "xavier",
         "momentum": 0.99,
-        "epochs": 1000
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
+            8,
             1
         ],
         "activations": [
@@ -1496,8 +461,8 @@
         ],
         "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1000
+        "momentum": 0.9,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
@@ -1512,36 +477,6 @@
         "learning_rates": 0.001,
         "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.99,
         "epochs": 500
     },
     {
@@ -1557,126 +492,6 @@
         "learning_rates": 0.01,
         "weight_initialization": "xavier",
         "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.99,
         "epochs": 500
     },
     {
@@ -1701,351 +516,6 @@
             1
         ],
         "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 500
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            8,
-            1
-        ],
-        "activations": [
-            "tanh",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.99,
-        "epochs": 1000
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            1
-        ],
-        "activations": [
             "tanh",
             "sigmoid"
         ],
@@ -2065,8 +535,203 @@
             "sigmoid"
         ],
         "learning_rates": 0.01,
+        "weight_initialization": "he",
+        "momentum": 0.99,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "tanh",
+            "sigmoid"
+        ],
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
+        "momentum": 0.9,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.005,
+        "weight_initialization": "he",
+        "momentum": 0.99,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "tanh",
+            "sigmoid"
+        ],
+        "learning_rates": 0.001,
+        "weight_initialization": "he",
+        "momentum": 0.95,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.005,
         "weight_initialization": "xavier",
         "momentum": 0.99,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.01,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "tanh",
+            "sigmoid"
+        ],
+        "learning_rates": 0.005,
+        "weight_initialization": "he",
+        "momentum": 0.99,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.005,
+        "weight_initialization": "he",
+        "momentum": 0.99,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "tanh",
+            "sigmoid"
+        ],
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
+        "momentum": 0.99,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "tanh",
+            "sigmoid"
+        ],
+        "learning_rates": 0.01,
+        "weight_initialization": "xavier",
+        "momentum": 0.9,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "tanh",
+            "sigmoid"
+        ],
+        "learning_rates": 0.01,
+        "weight_initialization": "xavier",
+        "momentum": 0.99,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "tanh",
+            "sigmoid"
+        ],
+        "learning_rates": 0.01,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.01,
+        "weight_initialization": "xavier",
+        "momentum": 0.99,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
+        "momentum": 0.95,
         "epochs": 500
     },
     {
@@ -2082,7 +747,7 @@
         "learning_rates": 0.005,
         "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1000
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
@@ -2095,9 +760,69 @@
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.01,
         "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1000
+        "momentum": 0.9,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.001,
+        "weight_initialization": "he",
+        "momentum": 0.99,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.005,
+        "weight_initialization": "xavier",
+        "momentum": 0.9,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "tanh",
+            "sigmoid"
+        ],
+        "learning_rates": 0.005,
+        "weight_initialization": "xavier",
+        "momentum": 0.99,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
@@ -2124,10 +849,145 @@
             "tanh",
             "sigmoid"
         ],
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
+        "momentum": 0.95,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.005,
+        "weight_initialization": "xavier",
+        "momentum": 0.99,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "tanh",
+            "sigmoid"
+        ],
+        "learning_rates": 0.01,
+        "weight_initialization": "xavier",
+        "momentum": 0.95,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "tanh",
+            "sigmoid"
+        ],
+        "learning_rates": 0.005,
+        "weight_initialization": "he",
+        "momentum": 0.95,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.01,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
+        "momentum": 0.9,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.005,
+        "weight_initialization": "he",
+        "momentum": 0.95,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
         "learning_rates": 0.01,
         "weight_initialization": "xavier",
         "momentum": 0.99,
-        "epochs": 1000
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
+        "momentum": 0.99,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.005,
+        "weight_initialization": "xavier",
+        "momentum": 0.95,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
@@ -2141,8 +1001,53 @@
         ],
         "learning_rates": 0.005,
         "weight_initialization": "he",
+        "momentum": 0.9,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "tanh",
+            "sigmoid"
+        ],
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
         "momentum": 0.99,
-        "epochs": 1000
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
+        "momentum": 0.95,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            16,
+            1
+        ],
+        "activations": [
+            "tanh",
+            "sigmoid"
+        ],
+        "learning_rates": 0.005,
+        "weight_initialization": "he",
+        "momentum": 0.95,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
@@ -2151,12 +1056,27 @@
             1
         ],
         "activations": [
-            "relu",
+            "tanh",
             "sigmoid"
         ],
-        "learning_rates": 0.005,
+        "learning_rates": 0.01,
         "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1000
+        "momentum": 0.95,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            1
+        ],
+        "activations": [
+            "tanh",
+            "sigmoid"
+        ],
+        "learning_rates": 0.001,
+        "weight_initialization": "he",
+        "momentum": 0.99,
+        "epochs": 500
     }
 ]

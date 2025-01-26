@@ -1,0 +1,57 @@
+****************main.py****************
+
+ # The encoded data will be returned here.
+
+        # print(f"X_train shape: {X_train.shape}, X_test shape: {X_test.shape}")
+        # print("Sample X_train:", X_train[:5])
+        # print("Sample X_test:", X_test[:5])
+
+        # unique_values = np.unique(X_train, axis=0)
+        # print(f"Number of unique samples in X_train: {len(unique_values)}")
+
+        # common_samples = np.intersect1d(X_train, X_test)
+        # print("Data Type after Conversion:", X_train.dtype, X_test.dtype)
+
+        # if len(common_samples) > 0:
+        #     print(
+        #         f"Data Leakage Detected! {len(common_samples)} samples are duplicated in train and test sets.")
+        # else:
+        #     print("No data leakage detected. Train and test sets are unique.")
+
+        2.     # print(X_test.shape, X_train.shape)
+    # print(Y_test[:5])  # Check a few sample labels
+
+    3.   # predicted_labels = (predictions_train >= 0.5).astype(int)
+
+    # correct_predictions = np.sum(
+    #     predicted_labels.flatten() == Y_test.flatten())
+
+    # total_samples = Y_test.shape[0]
+    # accuracy = (correct_predictions / total_samples) * 100
+    # print(f"==========Model Accuracy: {accuracy:.2f}%")
+
+4.  # print(f"Sample Train Predictions: {predictions_train[:169]}")
+    # print(f"Sample Test Predictions: {predictions_test[:431]}")
+5.      # print(f"Computed Training Loss: {computed_train_loss}")
+    # print(f"Computed Test Loss: {computed_test_loss}")
+
+    6.  # if test_accuracy is not None:
+    #     print(
+    #         f"[FINAL] {dataset_name} Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.2f}%")
+    # else:
+    #     print(f"[FINAL] {dataset_name} Test Loss: {test_loss:.4f}")
+
+
+****************hyperparamter.py****************
+
+****************preprocessor.py****************
+
+****************training.py****************
+
+****************neuralNet.py****************
+
+1.    # print(f"Epoch {epoch+1} - First few weights:",
+                #       self.weights[0][:5])  # Debugging weight updates
+
+
+****************task_functions.py****************

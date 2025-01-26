@@ -5,7 +5,7 @@
         1
     ],
     "activations": [
-        "tanh",
+        "relu",
         "sigmoid"
     ],
     "learning_rates": 0.01,

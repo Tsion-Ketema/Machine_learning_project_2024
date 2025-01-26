@@ -41,7 +41,7 @@ class HyperparameterManager:
                 'weight_initialization': ['xavier', 'he'],  # (2 options)
                 'momentum': [0.8, 0.9],  # (2 options)
                 # (2 options - test with and without)
-                'regularization': [0, 0.0001],
+                # 'regularization': [0, 0.0001],
                 'epochs': [1000],  # (1 option)
                 'weight_decay': [0, 0.00005]  # (2 options)
             },
@@ -64,6 +64,7 @@ class HyperparameterManager:
                 'weight_initialization': ['xavier', 'he'],  # 2 options
                 'momentum': [0.9, 0.95, 0.99],  # 3 options
                 'epochs': [500],  # 2 options
+                'regularization': [0.0001, 0.0005],
             },
         }
         self.dataset_context = None

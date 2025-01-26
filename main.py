@@ -8,11 +8,15 @@ from training import *
 from task_functions import taskCup, taskMonk
 from neuralNet import *
 
+# ***************** setting up folders and subfolders *****************
+
 
 def setup_directories(base_folder, subfolders):
     """Ensure necessary directories exist and return paths."""
     return {name: os.makedirs(os.path.join(base_folder, name), exist_ok=True) or os.path.join(base_folder, name)
             for name in subfolders}
+
+# ***************** Initiating hyperparamter combination *****************
 
 
 def generate_hyperparameters(dataset_name, config_file):
@@ -27,6 +31,8 @@ def generate_hyperparameters(dataset_name, config_file):
     with open(config_file, "r") as f:
         return json.load(f)
 
+# ***************** Load/setting up hyperparamters/ cross validation initiation *****************
+
 
 def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_type='classification'):
     """Generic function to process MONK or CUP datasets."""
@@ -34,23 +40,6 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
     if "monk" in dataset_name:
         X_train, Y_train = load_and_preprocess_monk_dataset(train_file)
         X_test, Y_test = load_and_preprocess_monk_dataset(test_file)
-        # The encoded data will be returned here.
-
-        # print(f"X_train shape: {X_train.shape}, X_test shape: {X_test.shape}")
-        # print("Sample X_train:", X_train[:5])
-        # print("Sample X_test:", X_test[:5])
-
-        # unique_values = np.unique(X_train, axis=0)
-        # print(f"Number of unique samples in X_train: {len(unique_values)}")
-
-        # common_samples = np.intersect1d(X_train, X_test)
-        # print("Data Type after Conversion:", X_train.dtype, X_test.dtype)
-
-        # if len(common_samples) > 0:
-        #     print(
-        #         f"Data Leakage Detected! {len(common_samples)} samples are duplicated in train and test sets.")
-        # else:
-        #     print("No data leakage detected. Train and test sets are unique.")
 
         # Setup directories for monk datasets using original names
         paths = setup_directories("monk_hyperparameters", [
@@ -69,8 +58,10 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
                                   "chosen", "generated"])
         config_file = os.path.join(paths["generated"], "cup_all.json")
 
+    # Preparing the data to be trained and validation
     training_data, validation_data = (X_train, Y_train), (X_test, Y_test)
 
+    # Generating hyperparameter combination
     hyperparams = generate_hyperparameters(dataset_name, config_file)
 
     # Train and evaluate
@@ -80,69 +71,38 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
         train_file, n_folds, task_type
     )
 
-    # Save results
-    for i, model in enumerate(best_models):
-        plot_folder = os.path.join(
-            "plot", "monk" if "monk" in dataset_name else "cup")
-        os.makedirs(plot_folder, exist_ok=True)
+    # Plot only the best model (the first model in the sorted best_models list)
+    best_model = best_models[0]  # Select the model with the lowest avg loss
+    best_hyperparams = best_hyperparams_list[0]
 
-        plot_path = os.path.join(plot_folder, f"{dataset_name}_model{i+1}.png")
+    plot_folder = os.path.join(
+        "plot", "monk" if "monk" in dataset_name else "cup"
+    )
+    os.makedirs(plot_folder, exist_ok=True)
 
-        plot_training_curve(
-            model, dataset_name=f"{dataset_name}_model{i+1}", plot_path=plot_path, task_type=task_type)
+    # Save the training curve of the best model only
+    plot_path = os.path.join(plot_folder, f"{dataset_name}_best_model.png")
 
-        chosen_file = os.path.join(
-            paths["chosen"], f"cup_json_{i+1}.json") if dataset_name == "cup" else os.path.join(paths[dataset_name], "selected_one.json")
-        with open(chosen_file, 'w') as f:
-            json.dump(best_hyperparams_list[i], f, indent=4)
+    plot_training_curve(
+        best_model, dataset_name=f"{dataset_name}_best", plot_path=plot_path, task_type=task_type
+    )
 
+    # Save only the best hyperparameters under chosen
+    chosen_folder = paths.get(dataset_name, os.path.join(
+        "monk_hyperparameters", dataset_name))
+    os.makedirs(chosen_folder, exist_ok=True)
+
+    chosen_file = os.path.join(chosen_folder, f"{dataset_name}_best.json")
+
+    with open(chosen_file, 'w') as f:
+        json.dump(best_hyperparams, f, indent=4)
+
+    print(f"[INFO] The best model plot saved to {plot_path}")
+
+    # *********To display the accuracy and the loss in the terminal**************#
     best_model = best_models[0]
     test_loss, test_accuracy = evaluate_model(
         best_model, X_test, Y_test, task_type)
-
-    # print(X_test.shape, X_train.shape)
-    # print(Y_test[:5])  # Check a few sample labels
-
-    # Using the trained model
-    best_model.train(X_train, Y_train)
-    train_loss = best_model.compute_loss(X_train, Y_train)
-    test_loss = best_model.compute_loss(X_test, Y_test)
-
-    print(
-        f"New............Training Loss of the entire training file: {train_loss}")
-    print(f"New............Test Loss of the entire testing file: {test_loss}")
-
-    # Check loss calculation for classification
-    predictions_train = best_model.forward(X_train)
-    # Calculate accuracy for training and test data
-    predicted_labels_train = (predictions_train >= 0.5).astype(int)
-    train_accuracy = np.mean(
-        predicted_labels_train.flatten() == Y_train.flatten()) * 100
-    print(f"Training Accuracy: {train_accuracy:.2f}%")
-
-    # predicted_labels = (predictions_train >= 0.5).astype(int)
-
-    # correct_predictions = np.sum(
-    #     predicted_labels.flatten() == Y_test.flatten())
-
-    # total_samples = Y_test.shape[0]
-    # accuracy = (correct_predictions / total_samples) * 100
-    # print(f"==========Model Accuracy: {accuracy:.2f}%")
-
-    predictions_test = best_model.forward(X_test)
-
-    # print(f"Sample Train Predictions: {predictions_train[:169]}")
-    # print(f"Sample Test Predictions: {predictions_test[:431]}")
-
-    computed_train_loss = best_model.compute_loss(Y_train, predictions_train)
-    computed_test_loss = best_model.compute_loss(Y_test, predictions_test)
-
-    # print(f"Computed Training Loss: {computed_train_loss}")
-    # print(f"Computed Test Loss: {computed_test_loss}")
-
-    # Forward pass to check predictions
-    predictions = model.forward(X_test)
-    print(f"New............Sample Predictions: {predictions[:3]}")
 
     # Ensure correct dataset and model are used
     train_loss = best_model.compute_loss(Y_train, best_model.forward(X_train))
@@ -151,12 +111,6 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
     print(f"Final Training Loss: {train_loss}")
     print(f"Final Test Loss: {test_loss}")
 
-    print(f"Using dataset: {dataset_name}")
-    print(f"X_train shape: {X_train.shape}, X_test shape: {X_test.shape}")
-    print(f"Sample train data: {X_train[:5]}")
-    print(f"Selected Model Hyperparameters: {best_hyperparams_list[0]}")
-
-    print("**************************************")
     # Get model predictions
     train_predictions = best_model.forward(X_train)
     test_predictions = best_model.forward(X_test)
@@ -176,11 +130,6 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
     print(f"Test Accuracy: {test_accuracy:.2f}%")
 
     print("**************************************")
-    # if test_accuracy is not None:
-    #     print(
-    #         f"[FINAL] {dataset_name} Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.2f}%")
-    # else:
-    #     print(f"[FINAL] {dataset_name} Test Loss: {test_loss:.4f}")
 
     # Save final results
     os.makedirs("results", exist_ok=True)
@@ -195,8 +144,8 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
 
 if __name__ == "__main__":
     # Configuration: choose dataset and parameters in one place
-    RUN_MONK = True  # Set to False to run CUP instead
-    MONK_VERSION = "monks-3"  # Choose among "monks-1", "monks-2", "monks-3"
+    RUN_MONK = False  # Set to False to run CUP instead
+    MONK_VERSION = "monks-2"  # Choose among "monks-1", "monks-2", "monks-3"
 
     if RUN_MONK:
         process_dataset(MONK_VERSION, f"datasets/monk/{MONK_VERSION}.train",

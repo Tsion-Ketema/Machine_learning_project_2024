@@ -5,12 +5,15 @@ from functions import activation_map
 
 class NeuralNetwork:
     def __init__(self, hidden_layer_sizes, learning_rate, epochs, momentum,
-                 weight_initialization, regularization, activations=None, task_type='classification'):
+                 weight_initialization, regularization=0.0, activations=None, task_type='classification',
+
+                 ):
         self.hidden_layer_sizes = hidden_layer_sizes
         self.learning_rate = learning_rate
         self.epochs = epochs
         self.momentum = momentum
         self.weight_initialization = weight_initialization
+        # Apply regularization conditionally
         self.regularization = regularization
         self.task_type = task_type
 
@@ -99,14 +102,6 @@ class NeuralNetwork:
 
     def train(self, X, y, X_val=None, y_val=None):
         """Train the neural network with the provided data."""
-
-        # Check if validation data is passed
-        # if X_val is None or y_val is None:
-        #     print("[INFO] No validation data provided.")
-        # else:
-        #     print(
-        #         f"[INFO] Validation data provided. X_val shape: {X_val.shape}, y_val shape: {y_val.shape}")
-
         for epoch in range(self.epochs):
             self.forward(X)
             grads_w, grads_b = self.backward(X, y)
@@ -118,8 +113,6 @@ class NeuralNetwork:
                     self.velocity_b[i] - self.learning_rate * grads_b[i]
                 self.weights[i] += self.velocity_w[i]
                 self.biases[i] += self.velocity_b[i]
-                # print(f"Epoch {epoch+1} - First few weights:",
-                #       self.weights[0][:5])  # Debugging weight updates
 
             # Store train loss and accuracy
             train_loss = self.compute_loss(y, self.forward(X))
