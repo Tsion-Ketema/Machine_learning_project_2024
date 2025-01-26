@@ -24,11 +24,11 @@ def manual_kfold_split(X, Y, n_folds=5, shuffle=True, random_seed=42):
     splits = [(np.hstack([folds[i] for i in range(n_folds) if i != f]), folds[f])
               for f in range(n_folds)]
 
-    for i, (train_idx, val_idx) in enumerate(splits):
-        print(
-            f"Fold {i+1}: Train size = {len(train_idx)}, Validation size = {len(val_idx)}")
-        assert len(set(train_idx) & set(val_idx)
-                   ) == 0, f"Data leakage detected in fold {i+1}!"
+    # for i, (train_idx, val_idx) in enumerate(splits):
+    #     print(
+    #         f"Fold {i+1}: Train size = {len(train_idx)}, Validation size = {len(val_idx)}")
+    #     assert len(set(train_idx) & set(val_idx)
+    #                ) == 0, f"Data leakage detected in fold {i+1}!"
     return splits
 
 
@@ -38,8 +38,8 @@ def evaluate_model(model, X, y, task_type):
     loss = model.compute_loss(y, y_pred)
 
     # Check first few predictions
-    print(f"[DEBUG] Sample Predictions: {y_pred[:5].flatten()}")
-    print(f"[DEBUG] Actual Labels: {y[:5].flatten()}")
+    # print(f"[DEBUG] Sample Predictions: {y_pred[:5].flatten()}")
+    # print(f"[DEBUG] Actual Labels: {y[:5].flatten()}")
 
     accuracy = None  # Default to None for regression
     if task_type == 'classification':
@@ -171,16 +171,17 @@ def cross_validate_and_train(training_data, validation_data, hyperparams, task_f
             X_train_cv, Y_train_cv = X_dev[train_idx], Y_dev[train_idx]
             X_val_cv, Y_val_cv = X_dev[val_idx], Y_dev[val_idx]
 
-            print(
-                f"[DEBUG] Fold {fold_num+1}: Train={len(X_train_cv)}, Validation={len(X_val_cv)}")
+            # print(
+            #     f"[DEBUG] Fold {fold_num+1}: Train={len(X_train_cv)}, Validation={len(X_val_cv)}")
 
+            # we are sending the 1st fold training and validation fold extracted features and labels
             model = task_function((X_train_cv, Y_train_cv),
                                   (X_val_cv, Y_val_cv), config)
             loss, accuracy = evaluate_model(
                 model, X_val_cv, Y_val_cv, task_type)
 
-            print(
-                f"[DEBUG] Fold {fold_num+1}: Loss={loss:.4f}, Accuracy={accuracy:.2f}%")
+            # print(
+            #     f"[DEBUG] Fold {fold_num+1}: Loss={loss:.4f}, Accuracy={accuracy:.2f}%")
             fold_losses.append(loss)
             model_for_config = model
 

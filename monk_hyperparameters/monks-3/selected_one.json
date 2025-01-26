@@ -8,8 +8,8 @@
         "relu",
         "sigmoid"
     ],
-    "learning_rates": 0.005,
+    "learning_rates": 0.01,
     "weight_initialization": "xavier",
-    "momentum": 0.99,
-    "epochs": 1000
+    "momentum": 0.95,
+    "epochs": 500
 }

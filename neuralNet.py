@@ -139,6 +139,10 @@ class NeuralNetwork:
                     if self.val_accuracies is not None:
                         self.val_accuracies.append(val_acc)
 
+            # if (epoch + 1) % 100 == 0:
+            #     print(
+            #         f" In every epoch*******Epoch {epoch+1}/{self.epochs}, Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}" if val_loss is not None else f"Epoch {epoch+1}/{self.epochs}, Train Loss: {train_loss:.4f}")
+
     def _compute_accuracy(self, y_true, y_pred):
         """Compute classification accuracy safely."""
         if y_true.shape[1] > 1:  # If one-hot encoded, convert to class labels

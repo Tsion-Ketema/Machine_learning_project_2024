@@ -6,7 +6,7 @@ from preprocessor import *
 from hyperparameters import HyperparameterManager
 from training import *
 from task_functions import taskCup, taskMonk
-from neuralNet import NeuralNetwork
+from neuralNet import *
 
 
 def setup_directories(base_folder, subfolders):
@@ -36,21 +36,21 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
         X_test, Y_test = load_and_preprocess_monk_dataset(test_file)
         # The encoded data will be returned here.
 
-        print(f"X_train shape: {X_train.shape}, X_test shape: {X_test.shape}")
-        print("Sample X_train:", X_train[:5])
-        print("Sample X_test:", X_test[:5])
+        # print(f"X_train shape: {X_train.shape}, X_test shape: {X_test.shape}")
+        # print("Sample X_train:", X_train[:5])
+        # print("Sample X_test:", X_test[:5])
 
-        unique_values = np.unique(X_train, axis=0)
-        print(f"Number of unique samples in X_train: {len(unique_values)}")
+        # unique_values = np.unique(X_train, axis=0)
+        # print(f"Number of unique samples in X_train: {len(unique_values)}")
 
-        common_samples = np.intersect1d(X_train, X_test)
-        print("Data Type after Conversion:", X_train.dtype, X_test.dtype)
+        # common_samples = np.intersect1d(X_train, X_test)
+        # print("Data Type after Conversion:", X_train.dtype, X_test.dtype)
 
-        if len(common_samples) > 0:
-            print(
-                f"Data Leakage Detected! {len(common_samples)} samples are duplicated in train and test sets.")
-        else:
-            print("No data leakage detected. Train and test sets are unique.")
+        # if len(common_samples) > 0:
+        #     print(
+        #         f"Data Leakage Detected! {len(common_samples)} samples are duplicated in train and test sets.")
+        # else:
+        #     print("No data leakage detected. Train and test sets are unique.")
 
         # Setup directories for monk datasets using original names
         paths = setup_directories("monk_hyperparameters", [
@@ -103,11 +103,84 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
     # print(X_test.shape, X_train.shape)
     # print(Y_test[:5])  # Check a few sample labels
 
-    if test_accuracy is not None:
-        print(
-            f"[FINAL] {dataset_name} Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.2f}%")
-    else:
-        print(f"[FINAL] {dataset_name} Test Loss: {test_loss:.4f}")
+    # Using the trained model
+    best_model.train(X_train, Y_train)
+    train_loss = best_model.compute_loss(X_train, Y_train)
+    test_loss = best_model.compute_loss(X_test, Y_test)
+
+    print(
+        f"New............Training Loss of the entire training file: {train_loss}")
+    print(f"New............Test Loss of the entire testing file: {test_loss}")
+
+    # Check loss calculation for classification
+    predictions_train = best_model.forward(X_train)
+    # Calculate accuracy for training and test data
+    predicted_labels_train = (predictions_train >= 0.5).astype(int)
+    train_accuracy = np.mean(
+        predicted_labels_train.flatten() == Y_train.flatten()) * 100
+    print(f"Training Accuracy: {train_accuracy:.2f}%")
+
+    # predicted_labels = (predictions_train >= 0.5).astype(int)
+
+    # correct_predictions = np.sum(
+    #     predicted_labels.flatten() == Y_test.flatten())
+
+    # total_samples = Y_test.shape[0]
+    # accuracy = (correct_predictions / total_samples) * 100
+    # print(f"==========Model Accuracy: {accuracy:.2f}%")
+
+    predictions_test = best_model.forward(X_test)
+
+    # print(f"Sample Train Predictions: {predictions_train[:169]}")
+    # print(f"Sample Test Predictions: {predictions_test[:431]}")
+
+    computed_train_loss = best_model.compute_loss(Y_train, predictions_train)
+    computed_test_loss = best_model.compute_loss(Y_test, predictions_test)
+
+    # print(f"Computed Training Loss: {computed_train_loss}")
+    # print(f"Computed Test Loss: {computed_test_loss}")
+
+    # Forward pass to check predictions
+    predictions = model.forward(X_test)
+    print(f"New............Sample Predictions: {predictions[:3]}")
+
+    # Ensure correct dataset and model are used
+    train_loss = best_model.compute_loss(Y_train, best_model.forward(X_train))
+    test_loss = best_model.compute_loss(Y_test, best_model.forward(X_test))
+
+    print(f"Final Training Loss: {train_loss}")
+    print(f"Final Test Loss: {test_loss}")
+
+    print(f"Using dataset: {dataset_name}")
+    print(f"X_train shape: {X_train.shape}, X_test shape: {X_test.shape}")
+    print(f"Sample train data: {X_train[:5]}")
+    print(f"Selected Model Hyperparameters: {best_hyperparams_list[0]}")
+
+    print("**************************************")
+    # Get model predictions
+    train_predictions = best_model.forward(X_train)
+    test_predictions = best_model.forward(X_test)
+
+    # Convert predictions to binary labels (classification threshold of 0.5)
+    train_predicted_labels = (train_predictions >= 0.5).astype(int)
+    test_predicted_labels = (test_predictions >= 0.5).astype(int)
+
+    # Compute accuracy
+    train_accuracy = np.mean(
+        train_predicted_labels.flatten() == Y_train.flatten()) * 100
+    test_accuracy = np.mean(
+        test_predicted_labels.flatten() == Y_test.flatten()) * 100
+
+    # Display accuracy
+    print(f"Training Accuracy: {train_accuracy:.2f}%")
+    print(f"Test Accuracy: {test_accuracy:.2f}%")
+
+    print("**************************************")
+    # if test_accuracy is not None:
+    #     print(
+    #         f"[FINAL] {dataset_name} Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.2f}%")
+    # else:
+    #     print(f"[FINAL] {dataset_name} Test Loss: {test_loss:.4f}")
 
     # Save final results
     os.makedirs("results", exist_ok=True)
@@ -123,7 +196,7 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
 if __name__ == "__main__":
     # Configuration: choose dataset and parameters in one place
     RUN_MONK = True  # Set to False to run CUP instead
-    MONK_VERSION = "monks-2"  # Choose among "monks-1", "monks-2", "monks-3"
+    MONK_VERSION = "monks-3"  # Choose among "monks-1", "monks-2", "monks-3"
 
     if RUN_MONK:
         process_dataset(MONK_VERSION, f"datasets/monk/{MONK_VERSION}.train",

@@ -45,37 +45,26 @@ class HyperparameterManager:
                 'epochs': [1000],  # (1 option)
                 'weight_decay': [0, 0.00005]  # (2 options)
             },
-
             'monks-2': {
-                'hidden_layer_sizes': [(17, 8, 1)],
-                'activations': [('relu', 'sigmoid')],
-                'learning_rates': [0.005, 0.01],
-                # 'batch_sizes': [16, 32],
-                'weight_initialization': ['xavier'],
-                'momentum': [0.95],
-                'epochs': [500],
+                # 3 options
+                'hidden_layer_sizes': [(17, 8, 1), (17, 16, 1), (17, 8, 8, 1)],
+                # 2 options
+                'activations': [('relu', 'sigmoid'), ('tanh', 'sigmoid')],
+                'learning_rates': [0.001, 0.005, 0.01],  # 3 options
+                'weight_initialization': ['xavier', 'he'],  # 2 options
+                'momentum': [0.9, 0.95, 0.99],  # 3 options
+                'epochs': [500],  # 2 options
             },
             'monks-3': {
-                'hidden_layer_sizes': [
-                    (17, 10, 6, 3, 1),
-                    (17, 8, 4, 2, 1)
-                ],
-                'activations': [
-                    ('relu', 'relu', 'tanh', 'sigmoid'),
-                    ('leaky_relu', 'relu', 'relu', 'sigmoid')
-                ],
-
-                'learning_rates': [0.0005, 0.001, 0.002],
-                'batch_sizes': [64, 128, 256],
-                'weight_initialization': ['xavier', 'he'],
-                'momentum': [0.7, 0.8],
-                'regularization': [0.0005, 0.001, 0.005],
-                'epochs': [2000],
-                'weight_decay': [0.0001, 0.0005],
-                'dropout_rate': [0.1, 0.2]
-            }
-
-
+                # 3 options
+                'hidden_layer_sizes': [(17, 8, 1), (17, 16, 1), (17, 8, 8, 1)],
+                # 2 options
+                'activations': [('relu', 'sigmoid'), ('tanh', 'sigmoid')],
+                'learning_rates': [0.001, 0.005, 0.01],  # 3 options
+                'weight_initialization': ['xavier', 'he'],  # 2 options
+                'momentum': [0.9, 0.95, 0.99],  # 3 options
+                'epochs': [500],  # 2 options
+            },
         }
         self.dataset_context = None
 
