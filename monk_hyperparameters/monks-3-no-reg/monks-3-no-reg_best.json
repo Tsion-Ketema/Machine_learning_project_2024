@@ -2,14 +2,16 @@
     "hidden_layer_sizes": [
         17,
         4,
+        8,
         1
     ],
     "activations": [
+        "tanh",
         "relu",
         "sigmoid"
     ],
-    "learning_rates": 0.76,
-    "weight_initialization": "xavier",
+    "learning_rates": 0.005,
+    "weight_initialization": "he",
     "momentum": 0.85,
     "epochs": 1000,
     "weight_decay": 0,

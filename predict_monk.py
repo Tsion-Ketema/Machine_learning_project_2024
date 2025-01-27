@@ -39,6 +39,6 @@ def predict_monk(dataset_name):
 # Choose which MONK model to evaluate by modifying this variable
 if __name__ == "__main__":
     # Change the value to 'monks-1', 'monks-2', or 'monks-3'
-    MONK_VERSION = "monks-2"
+    MONK_VERSION = "monks-1"
 
     predict_monk(MONK_VERSION)

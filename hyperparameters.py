@@ -12,29 +12,30 @@ class HyperparameterManager:
         self.hyperparameters = {
             'monks-1': {
                 'hidden_layer_sizes': [
-                    (17, 4, 1), (17, 8, 4, 1), (17, 12, 6, 1), (17,
-                                                                16, 8, 1)  # Simple architectures to complex
+                    (17, 8, 1),
+                    (17, 12, 6, 1),
+                    (17, 16, 8, 1)
                 ],
                 'activations': [
                     ('relu', 'sigmoid'),
                     ('tanh', 'sigmoid')
                 ],
                 'learning_rates': [
-                    0.76, 0.8, 0.83, 0.001, 0.002  # Based on the report's eta values
+                    0.1, 0.01, 0.001
                 ],
                 'weight_initialization': [
-                    # Both Glorot (Xavier) and He initialization
                     'xavier', 'he'
                 ],
                 'momentum': [
-                    0.8, 0.83, 0.85, 0.9  # Fine-tuned momentum values to smooth convergence
+                    0.9, 0.95, 0.99
                 ],
                 'epochs': [
-                    1000  # Report suggests convergence by 500 epochs
+                    1000
                 ],
                 'weight_decay': [
-                    0  # No regularization as indicated in the report
-                ]
+                    0,
+                    0.00001,
+                ],
             },
 
             'monks-2': {
@@ -63,87 +64,95 @@ class HyperparameterManager:
                     0.95   # Aggressive momentum
                 ],
                 'epochs': [
-                    1000  # For experimentation
+                    500  # For experimentation
                 ],
                 'weight_decay': [
                     0,  # No regularization for baseline
                     0.00001,  # Minimal L2 weight decay to prevent overfitting
                     0.0001  # Slightly stronger regularization
                 ],
-
             },
-            'monks-3-no-reg': {
+
+            'monks-3-l1': {  # Monk-3 with L1 regularization
                 'hidden_layer_sizes': [
-                    (17, 4, 1),  # Report suggested topology
-                    (17, 4, 8, 1),
-                    (17, 4, 8, 16, 1)
+                    (17, 8, 1),
+                    (17, 12, 6, 1),
+                    (17, 16, 8, 1)
                 ],
                 'activations': [
-                    ('relu', 'sigmoid'),  # Common choice in report
-                    ('tanh', 'relu', 'sigmoid'),
-                    ('tanh', 'leaky_relu', 'relu', 'sigmoid'),
+                    ('relu', 'sigmoid'),
+                    ('tanh', 'sigmoid')
                 ],
                 'learning_rates': [
-                    0.76, 0.8, 0.83, 0.001, 0.005, 0.01
+                    0.001, 0.002, 0.005
                 ],
                 'weight_initialization': [
                     'xavier', 'he'
                 ],
                 'momentum': [
-                    0.8, 0.83, 0.85, 0.9, 0.95
+                    0.85, 0.9
                 ],
-                'epochs': [1000],
-                'weight_decay': [
-                    0  # No regularization
+                'epochs': [500],
+                'regularization': [
+                    ('L1', 0.0001),
+                    ('L1', 0.0005),
+                    ('L1', 0.001)
                 ],
             },
-            'monks-3-l1': {  # Monk-3 with L1 regularization
+            'monks-3-l2': {
                 'hidden_layer_sizes': [
-                    (17, 8, 1),  # Simpler architecture with fewer neurons
-                    (17, 12, 6, 1),  # Deeper architecture with more hidden layers
-                    (17, 16, 8, 1)  # Balanced deeper model
+                    (17, 12, 6, 1),
+                    (17, 16, 8, 1),
+                    (17, 24, 12, 6, 1),
+
                 ],
                 'activations': [
-                    ('relu', 'sigmoid'),  # Common activation for deep networks
-                    ('tanh', 'sigmoid')   # Alternative activation for comparison
+                    ('relu', 'sigmoid'),
+                    ('tanh', 'sigmoid'),
+                    ('relu', 'leaky_relu', 'sigmoid')
                 ],
                 'learning_rates': [
-                    0.001, 0.002, 0.005  # Range of learning rates for tuning
+                    0.01,   # Faster learning
+                    0.005,  # Balanced convergence
+                    0.002,  # Lower rate for stable optimization
+                    0.001,  # Fine-tuned learning
+                    0.0005  # Very fine-tuned adjustments
                 ],
                 'weight_initialization': [
-                    'xavier', 'he'  # Suitable initializations for stability
+                    'he',     # Optimized for ReLU
+                    'xavier'  # Balanced for tanh/sigmoid
                 ],
                 'momentum': [
-                    0.85, 0.9  # Momentum values observed in report
+                    0.85,  # Standard momentum for stability
+                    0.9,   # High momentum for faster convergence
+                    0.95   # Aggressive smoothing
                 ],
                 'epochs': [
-                    750, 1000  # Slightly increased for convergence
+                    1500   # More training for deeper models
                 ],
                 'regularization': [
-                    ('L1', 0.0001),  # Reduced to avoid over-penalization
-                    ('L1', 0.0005),
-                    ('L1', 0.001)  # Different values to experiment with
+                    ('L2', 0.0001),  # Light regularization
+                    ('L2', 0.0005),  # Moderate
+                    ('L2', 0.001),   # Stronger
+                    ('L2', 0.0023),  # Higher
+                    ('L2', 0.005)    # Strong regularization for complex models
                 ],
             },
-
-            'monks-3-l2': {  # Monk-3 with L2 regularization
-                'hidden_layer_sizes': [(17, 15, 1)],
-                'activations': [('relu', 'sigmoid')],
-                'learning_rates': [0.001],
-                'weight_initialization': ['xavier'],
-                'momentum': [0.9],
-                'epochs': [500],
-                'regularization': [('L2', 0.0023)],  # L2 regularization
-            },
             'cup': {
-                'hidden_layer_sizes': [(12, 8, 3), (12, 16, 8, 3)],
-                'activations': [('relu', 'identity'), ('leaky_relu', 'leaky_relu', 'identity')],
+                'hidden_layer_sizes': [
+                    (12, 8, 3),
+                    (12, 16, 8, 3),
+                ],
+                'activations': [
+                    ('relu', 'identity'),
+                    ('leaky_relu', 'leaky_relu', 'identity'),
+
+                ],
                 'learning_rates': [0.0001, 0.001],
-                'batch_sizes': [8, 16],
                 'weight_initialization': ['he', 'xavier'],
                 'momentum': [0.2, 0.8],
-                'regularization': [('L1', 0.0001), ('L2', 0.001)],
-                'epochs': [1000],
+                'regularization': [0.0001, 0.001, 0.01],
+                'epochs': [100, 200, 1000],
                 'dropout_rate': [0.1, 0.2],
             },
         }

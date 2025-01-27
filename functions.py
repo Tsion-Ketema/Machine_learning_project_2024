@@ -15,8 +15,15 @@ def tanh(x): return np.tanh(x)
 def tanh_derivative(x): return 1 - np.tanh(x) ** 2
 
 
-def sigmoid(x): return 1 / (1 + np.exp(-x))
-def sigmoid_derivative(x): s = sigmoid(x); return s * (1 - s)
+def sigmoid(x):
+    """Numerically stable sigmoid function to avoid overflow."""
+    x = np.clip(x, -50, 50)  # Clip values to prevent overflow
+    return 1 / (1 + np.exp(-x))
+
+
+def sigmoid_derivative(x):
+    s = sigmoid(x)
+    return s * (1 - s)
 
 
 def identity(x): return x

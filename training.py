@@ -70,15 +70,18 @@ def plot_training_curve(model, dataset_name, plot_path=None, task_type=None):
     epochs = range(1, len(model.train_losses) + 1)
     plt.figure(figsize=(14, 6))
 
+    # Determine the appropriate loss label
+    loss_label = "Loss (MSE)" if task_type == 'classification' else "Loss (MEE)"
+    train_label = "Train Loss (MSE)" if task_type == 'classification' else "Train Loss (MEE)"
+    val_label = "Validation Loss (MSE)" if task_type == 'classification' else "Validation Loss (MEE)"
+
     # Plot Loss (Train vs Validation)
     plt.subplot(1, 2, 1)
-    plt.plot(epochs, model.train_losses, '--',
-             color="blue", label="Train Loss (MSE)")
+    plt.plot(epochs, model.train_losses, '--', color="blue", label=train_label)
     if model.val_losses and len(model.val_losses) == len(epochs):
-        plt.plot(epochs, model.val_losses, color="red",
-                 label="Validation Loss (MSE)")
+        plt.plot(epochs, model.val_losses, color="red", label=val_label)
     plt.xlabel("Epochs")
-    plt.ylabel("Loss (MSE)")
+    plt.ylabel(loss_label)
     plt.title(f"Loss vs. Epochs for {dataset_name}")
     plt.legend()
     plt.grid(True)
@@ -86,14 +89,14 @@ def plot_training_curve(model, dataset_name, plot_path=None, task_type=None):
     # Plot Accuracy (Train vs Validation) with smoothing
     plt.subplot(1, 2, 2)
     if task_type == 'classification':
-        if model.train_accuracies and model.val_accuracies:
+        if model.train_accuracies and len(model.train_accuracies) > 0 and model.val_accuracies and len(model.val_accuracies) > 0:
             smoothed_train_acc = moving_average(
                 model.train_accuracies, window_size=10)
             smoothed_val_acc = moving_average(
                 model.val_accuracies, window_size=10)
 
-            plt.plot(epochs[:len(smoothed_train_acc)], smoothed_train_acc, '--',
-                     color="blue", label="Train Accuracy")
+            plt.plot(epochs[:len(smoothed_train_acc)], smoothed_train_acc,
+                     '--', color="blue", label="Train Accuracy")
             plt.plot(epochs[:len(smoothed_val_acc)], smoothed_val_acc,
                      color="red", label="Validation Accuracy")
 
