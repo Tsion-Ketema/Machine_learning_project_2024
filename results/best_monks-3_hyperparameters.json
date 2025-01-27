@@ -3,7 +3,7 @@
         17,
         12,
         8,
-        4,
+        8,
         1
     ],
     "activations": [
@@ -13,9 +13,9 @@
         "sigmoid"
     ],
     "learning_rates": 0.01,
-    "batch_sizes": 64,
-    "weight_initialization": "he",
+    "batch_sizes": 16,
+    "weight_initialization": "xavier",
     "momentum": 0.9,
-    "regularization": 0.0005,
-    "epochs": 1500
+    "regularization": 0.01,
+    "epochs": 1000
 }

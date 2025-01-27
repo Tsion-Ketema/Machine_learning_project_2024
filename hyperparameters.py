@@ -38,11 +38,11 @@ class HyperparameterManager:
                 'hidden_layer_sizes': [(17, 8, 4, 1), (17, 12, 6, 1)],
                 # 2 options
                 'activations': [('relu', 'relu', 'sigmoid'), ('relu', 'tanh', 'sigmoid')],
-                'learning_rates': [0.005, 0.01, 0.02],  # 3 options
+                'learning_rates': [0.005, 0.01],  # 3 options
                 'batch_sizes': [16, 32],  # 2 options
                 'weight_initialization': ['xavier', 'he'],  # 2 options
-                'momentum': [0.9],  # 1 option
-                'regularization': [0.00001, 0.0001],  # 2 options
+                'momentum': [0.5,0.9],  # 1 option
+                'regularization': [0, 0.0001],  # 2 options
                 'epochs': [1000],  # 1 option
                 'weight_decay': [0.00005],  # 1 option
             },
@@ -57,23 +57,23 @@ class HyperparameterManager:
                 'epochs': [2000],
                 'optimizer': ['sgd'],
             },
-            'monks-3': {
+             'monks-3': {
                 # Increase depth slightly
-                'hidden_layer_sizes': [(17, 12, 8, 4, 1)],
+                'hidden_layer_sizes': [(17, 12, 8, 8, 1)],
                 # Use more ReLU for stable learning
                 'activations': [('relu', 'relu', 'relu', 'sigmoid')],
                 # Include a higher learning rate for faster convergence
-                'learning_rates': [0.001, 0.005, 0.01],
+                'learning_rates': [0.001, 0.01],
                 # Increase batch sizes for stability
-                'batch_sizes': [32, 64, 128],
+                'batch_sizes': [16,32],
                 # He initialization suits deep networks
-                'weight_initialization': ['he'],
+                'weight_initialization': [ 'xavier'],
                 # Increase momentum for faster convergence
-                'momentum': [0.85, 0.9],
+                'momentum': [0.5, 0.9],
                 # Moderate L2 regularization to avoid overfitting
-                'regularization': [0.0001, 0.0005],
+                'regularization': [0.01, 0.0005],
                 # Increase training iterations for fine-tuning
-                'epochs': [1500],
+                'epochs': [1000],
             }
 
         }

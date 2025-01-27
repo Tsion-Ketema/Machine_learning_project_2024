@@ -12,8 +12,8 @@
         "tanh",
         "sigmoid"
     ],
-    "learning_rates": 0.01,
-    "batch_sizes": 16,
+    "learning_rates": 0.005,
+    "batch_sizes": 32,
     "weight_initialization": "xavier",
     "momentum": 0.95,
     "regularization": 1e-05,

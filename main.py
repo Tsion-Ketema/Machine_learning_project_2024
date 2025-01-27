@@ -34,11 +34,12 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
     if "monk" in dataset_name:
         X_train, Y_train = load_and_preprocess_monk_dataset(train_file)
         X_test, Y_test = load_and_preprocess_monk_dataset(test_file)
+        
         # The encoded data will be returned here.
 
         # print(f"X_train shape: {X_train.shape}, X_test shape: {X_test.shape}")
-        print("Sample X_train:", X_train[:5])
-        print("Sample X_test:", X_test[:5])
+        print("Sample X_train:", X_train[:1])
+        print("Sample X_test:", X_test[:1])
 
         # common_samples = np.intersect1d(X_train, X_test)
         # print("Data Type after Conversion:", X_train.dtype, X_test.dtype)
