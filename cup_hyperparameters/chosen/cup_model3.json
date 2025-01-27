@@ -12,7 +12,7 @@
     "weight_initialization": "xavier",
     "momentum": 0.95,
     "epochs": 1000,
-    "weight_decay": 0.0001,
+    "weight_decay": 1e-05,
     "regularization_type": "none",
     "regularization": 0
 }

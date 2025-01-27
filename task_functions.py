@@ -18,8 +18,6 @@ def train_model(train_data, val_data, config, task_type):
     if isinstance(activations, str):  # Single activation for all layers
         activations = [activations] * (len(config['hidden_layer_sizes']) - 1)
 
-    regularization = config.get('regularization', 0)
-
     model = NeuralNetwork(
         hidden_layer_sizes=config['hidden_layer_sizes'],
         learning_rate=config['learning_rates'],
@@ -30,12 +28,6 @@ def train_model(train_data, val_data, config, task_type):
         activations=activations,
         task_type=task_type
     )
-    # if X_vl is not None and Y_vl is not None:
-    #     print("Validation data is available, proceeding with training...")
-    # else:
-    #     print("Validation data is NOT available, skipping validation...")
-
-    # print("Initial weights:", model.weights[0][:5])
     model.train(X_tr, Y_tr, X_val=X_vl, y_val=Y_vl)
     # print("Final weights:", model.weights[0][:5])
     return model

@@ -1,19 +1,20 @@
 {
     "hidden_layer_sizes": [
-        12,
-        8,
-        3
+        17,
+        15,
+        1
     ],
     "activations": [
         "relu",
-        "identity"
+        "sigmoid"
     ],
     "learning_rates": 0.001,
-    "batch_sizes": 8,
     "weight_initialization": "xavier",
-    "momentum": 0.8,
-    "regularization": 0,
-    "epochs": 1000,
-    "dropout_rate": 0.1,
+    "momentum": 0.9,
+    "epochs": 500,
+    "regularization": [
+        "L2",
+        0.0023
+    ],
     "regularization_type": "none"
 }

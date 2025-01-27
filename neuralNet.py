@@ -4,27 +4,6 @@ from functions import activation_map
 
 
 class NeuralNetwork:
-    # def __init__(self, hidden_layer_sizes, learning_rate, epochs, momentum,
-    #              weight_initialization, regularization=0.0, activations=None, task_type='classification',
-
-    #              ):
-    #     self.hidden_layer_sizes = hidden_layer_sizes
-    #     self.learning_rate = learning_rate
-    #     self.epochs = epochs
-    #     self.momentum = momentum
-    #     self.weight_initialization = weight_initialization
-    #     # Apply regularization conditionally
-    #     self.regularization = regularization
-    #     self.task_type = task_type
-
-    #     self.activations = self._initialize_activations(activations)
-    #     self.activation_functions, self.derivative_functions = self._get_activation_functions()
-
-    #     self._initialize_parameters()
-    #     self.train_losses, self.val_losses = [], []
-    #     self.train_accuracies, self.val_accuracies = ([] if self.task_type == 'classification' else None,
-    #                                                   [] if self.task_type == 'classification' else None)
-
     def __init__(self, hidden_layer_sizes, learning_rate, epochs, momentum,
                  weight_initialization, regularization=None, activations=None, task_type='classification'):
         self.hidden_layer_sizes = hidden_layer_sizes
@@ -67,6 +46,7 @@ class NeuralNetwork:
 
     def _initialize_parameters(self):
         """Initialize weights and biases using the selected method."""
+        np.random.seed(42)  # Set a fixed seed for reproducibility
         self.weights, self.biases, self.velocity_w, self.velocity_b = [], [], [], []
         for i in range(len(self.hidden_layer_sizes) - 1):
             fan_in, fan_out = self.hidden_layer_sizes[i], self.hidden_layer_sizes[i + 1]
@@ -87,16 +67,6 @@ class NeuralNetwork:
             self.a_cache.append(act(z))
         return self.a_cache[-1]
 
-    # def compute_loss(self, y_true, y_pred):
-    #     """Compute loss (MSE for classification, MEE for regression)."""
-    #     diff = y_true - y_pred
-    #     if self.task_type == 'classification':
-    #         # Mean Squared Error (MSE) for classification tasks
-    #         return np.mean(np.sum(diff ** 2, axis=1))
-    #     else:
-    #         # Mean Euclidean Error (MEE) for regression tasks, with numerical stability
-    #         return np.mean(np.sqrt(np.sum(diff ** 2, axis=1) + 1e-12))
-
     def compute_loss(self, y_true, y_pred):
         """Compute loss with optional L1 or L2 regularization."""
         diff = y_true - y_pred
@@ -112,28 +82,6 @@ class NeuralNetwork:
             reg_term = 0
 
         return loss + reg_term
-
-    # def backward(self, X, y_true):
-    #     """Perform backward propagation to compute gradients."""
-    #     m = X.shape[0]
-    #     y_pred = self.a_cache[-1]
-    #     diff = y_pred - y_true
-    #     dLoss_dYpred = (2 * diff / m) if self.task_type == 'classification' else diff / \
-    #         (np.sqrt(np.sum(diff**2, axis=1, keepdims=True)) + 1e-12) / m
-
-    #     grads_w, grads_b = [], []
-    #     delta = dLoss_dYpred
-    #     for i in reversed(range(len(self.weights))):
-    #         reg_term = self.regularization * \
-    #             self.weights[i] if self.regularization else 0
-    #         grads_w.insert(
-    #             0, np.dot(self.a_cache[i].T, delta) + reg_term)
-    #         grads_b.insert(0, np.sum(delta, axis=0, keepdims=True))
-    #         if i > 0:
-    #             delta = np.dot(
-    #                 delta, self.weights[i].T) * self.derivative_functions[i - 1](self.z_cache[i - 1])
-
-    #     return grads_w, grads_b
 
     def backward(self, X, y_true):
         """Compute gradients including L1 or L2 regularization if applicable."""
@@ -190,10 +138,6 @@ class NeuralNetwork:
                         y_val, self.forward(X_val))
                     if self.val_accuracies is not None:
                         self.val_accuracies.append(val_acc)
-
-            # if (epoch + 1) % 100 == 0:
-            #     print(
-            #         f" In every epoch*******Epoch {epoch+1}/{self.epochs}, Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}" if val_loss is not None else f"Epoch {epoch+1}/{self.epochs}, Train Loss: {train_loss:.4f}")
 
     def _compute_accuracy(self, y_true, y_pred):
         """Compute classification accuracy safely."""
