@@ -160,21 +160,21 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
 
 if __name__ == "__main__":
     RUN_MONK = True  # Set to False to run CUP instead
-    MONK_VERSION = "monks-2"  # Choose among "monks-1", "monks-2", "monks-3"
+    MONK_VERSION = "monks-3"  # Choose among "monks-1", "monks-2", "monks-3"
 
     if RUN_MONK:
         if MONK_VERSION == "monks-3":
             # Process without regularization
-            process_dataset("monks-3-no-reg", f"datasets/monk/monks-3.train",
-                            f"datasets/monk/monks-3.test", n_folds=5, task_type='classification')
+            # process_dataset("monks-3-no-reg", f"datasets/monk/monks-3.train",
+            #                 f"datasets/monk/monks-3.test", n_folds=5, task_type='classification')
 
             # Process with L1 regularization
             process_dataset("monks-3-l1", f"datasets/monk/monks-3.train",
                             f"datasets/monk/monks-3.test", n_folds=5, task_type='classification')
 
-            # Process with L2 regularization
-            process_dataset("monks-3-l2", f"datasets/monk/monks-3.train",
-                            f"datasets/monk/monks-3.test", n_folds=5, task_type='classification')
+            # # Process with L2 regularization
+            # process_dataset("monks-3-l2", f"datasets/monk/monks-3.train",
+            #                 f"datasets/monk/monks-3.test", n_folds=5, task_type='classification')
         else:
             process_dataset(MONK_VERSION, f"datasets/monk/{MONK_VERSION}.train",
                             f"datasets/monk/{MONK_VERSION}.test", n_folds=5, task_type='classification')
