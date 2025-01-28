@@ -2,3264 +2,313 @@
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
         "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
+        "momentum": 0.5,
         "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.8,
+        "momentum": 0.5,
         "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
+        "momentum": 0.9,
         "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.2,
+        "momentum": 0.9,
         "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
+        "momentum": 0.5,
         "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
+        "momentum": 0.5,
         "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
+        "momentum": 0.5,
         "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
+        "momentum": 0.9,
         "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
+        "momentum": 0.9,
         "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            8,
-            3
-        ],
-        "activations": [
-            "relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.2
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.1
-    },
-    {
-        "hidden_layer_sizes": [
-            12,
-            16,
-            8,
-            3
-        ],
-        "activations": [
-            "leaky_relu",
-            "leaky_relu",
-            "identity"
-        ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
@@ -3267,545 +316,509 @@
             "identity"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "learning_rates": 0.0005,
+        "weight_initialization": "xavier",
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.8,
+        "momentum": 0.5,
         "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.001,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "weight_initialization": "he",
+        "momentum": 0.5,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
+        "momentum": 0.5,
         "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "learning_rates": 0.0005,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
+        "momentum": 0.5,
         "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "learning_rates": 0.0005,
+        "weight_initialization": "he",
+        "momentum": 0.5,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
         "learning_rates": 0.001,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
         "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.2,
+        "momentum": 0.5,
         "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "weight_initialization": "he",
+        "momentum": 0.5,
+        "regularization": 0.0001,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
+        "momentum": 0.9,
         "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "learning_rates": 0.0005,
+        "weight_initialization": "he",
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
+        "weight_initialization": "he",
+        "momentum": 0.9,
         "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.001,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "learning_rates": 0.0005,
+        "weight_initialization": "xavier",
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "weight_initialization": "xavier",
+        "momentum": 0.5,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
         "learning_rates": 0.001,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.2,
+        "momentum": 0.5,
         "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "learning_rates": 0.0005,
+        "weight_initialization": "he",
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "learning_rates": 0.001,
+        "weight_initialization": "he",
+        "momentum": 0.5,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
@@ -3813,105 +826,101 @@
             "identity"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "weight_initialization": "xavier",
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "learning_rates": 0.001,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "learning_rates": 0.0005,
+        "weight_initialization": "xavier",
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.001,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
+        "momentum": 0.5,
         "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
+        "weight_initialization": "xavier",
+        "momentum": 0.5,
         "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
@@ -3920,15 +929,15 @@
         ],
         "learning_rates": 0.001,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
@@ -3937,286 +946,287 @@
         ],
         "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            12,
+            6,
+            3
+        ],
+        "activations": [
+            "tanh",
+            "identity"
+        ],
+        "learning_rates": 0.0005,
+        "weight_initialization": "he",
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
+        "learning_rates": 0.0005,
+        "weight_initialization": "he",
+        "momentum": 0.9,
         "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "learning_rates": 0.0005,
+        "weight_initialization": "he",
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "momentum": 0.5,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "learning_rates": 0.001,
+        "weight_initialization": "he",
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
+        "momentum": 0.9,
         "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
         "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "momentum": 0.5,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
         "learning_rates": 0.001,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
@@ -4224,16 +1234,16 @@
             "identity"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "weight_initialization": "xavier",
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
@@ -4242,142 +1252,151 @@
         ],
         "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.8,
+        "momentum": 0.9,
         "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.001,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            12,
+            6,
+            3
+        ],
+        "activations": [
+            "tanh",
+            "identity"
+        ],
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
+        "learning_rates": 0.0005,
+        "weight_initialization": "xavier",
+        "momentum": 0.9,
         "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "learning_rates": 0.0005,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
@@ -4386,445 +1405,440 @@
         ],
         "learning_rates": 0.001,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "momentum": 0.5,
+        "regularization": 0.0001,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
+        "momentum": 0.9,
         "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.8,
+        "momentum": 0.9,
         "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "momentum": 0.5,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
+        "momentum": 0.5,
         "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
+        "weight_initialization": "he",
+        "momentum": 0.5,
         "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.2,
+        "momentum": 0.5,
         "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "momentum": 0.5,
+        "regularization": 0.0001,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "learning_rates": 0.001,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 500
+    },
+    {
+        "hidden_layer_sizes": [
+            12,
+            6,
+            3
+        ],
+        "activations": [
+            "relu",
+            "identity"
+        ],
+        "learning_rates": 0.001,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.001,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "momentum": 0.5,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "weight_initialization": "xavier",
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "momentum": 0.5,
+        "regularization": 0.0001,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "learning_rates": 0.0005,
+        "weight_initialization": "xavier",
+        "momentum": 0.5,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
-            "relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
@@ -4833,354 +1847,332 @@
         ],
         "learning_rates": 0.001,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
+        "momentum": 0.5,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "momentum": 0.5,
+        "regularization": 0.0001,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.001,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.8,
+        "momentum": 0.9,
         "regularization": 0.0001,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
+        "weight_initialization": "he",
+        "momentum": 0.5,
         "regularization": 0.0001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.2
+        "learning_rates": 0.0005,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.001,
         "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.2
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
+        "learning_rates": 0.0005,
+        "weight_initialization": "he",
+        "momentum": 0.9,
         "regularization": 0.0001,
-        "epochs": 200,
-        "dropout_rate": 0.1
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "he",
-        "momentum": 0.8,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "learning_rates": 0.001,
+        "weight_initialization": "xavier",
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.0005,
         "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 1000,
-        "dropout_rate": 0.1
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
+        "learning_rates": 0.001,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.1,
+        "epochs": 200
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "tanh",
             "identity"
         ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.01,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "learning_rates": 0.0005,
+        "weight_initialization": "he",
+        "momentum": 0.5,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "learning_rates": 0.0005,
+        "weight_initialization": "xavier",
+        "momentum": 0.5,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            16,
-            8,
+            6,
             3
         ],
         "activations": [
-            "leaky_relu",
-            "leaky_relu",
+            "relu",
             "identity"
         ],
-        "learning_rates": 0.001,
+        "learning_rates": 0.0005,
         "weight_initialization": "xavier",
-        "momentum": 0.2,
-        "regularization": 0.001,
-        "epochs": 1000,
-        "dropout_rate": 0.2
+        "momentum": 0.9,
+        "regularization": 0.0005,
+        "dropout_rate": 0.2,
+        "epochs": 500
     },
     {
         "hidden_layer_sizes": [
             12,
-            8,
+            6,
             3
         ],
         "activations": [
             "relu",
             "identity"
         ],
-        "learning_rates": 0.0001,
-        "weight_initialization": "xavier",
-        "momentum": 0.8,
-        "regularization": 0.001,
-        "epochs": 100,
-        "dropout_rate": 0.1
+        "learning_rates": 0.001,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": 0.0001,
+        "dropout_rate": 0.1,
+        "epochs": 200
     }
 ]

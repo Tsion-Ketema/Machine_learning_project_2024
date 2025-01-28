@@ -1,11 +1,13 @@
 {
     "hidden_layer_sizes": [
         17,
-        8,
+        12,
+        6,
         1
     ],
     "activations": [
         "tanh",
+        "relu",
         "sigmoid"
     ],
     "learning_rates": 0.005,
@@ -14,7 +16,7 @@
     "epochs": 500,
     "regularization": [
         "L1",
-        0.0001
+        1e-05
     ],
     "regularization_type": "none"
 }

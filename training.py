@@ -78,15 +78,18 @@ def plot_training_curve(model, dataset_name, plot_path=None, task_type=None):
     # Plot Loss (Train vs Validation)
     plt.subplot(1, 2, 1)
     plt.plot(epochs, model.train_losses, '--', color="blue", label=train_label)
-    if model.val_losses and len(model.val_losses) == len(epochs):
-        plt.plot(epochs, model.val_losses, color="red", label=val_label)
+
+    # Adjust validation loss length to match epochs
+    val_losses_to_plot = model.val_losses[:len(epochs)]
+    plt.plot(epochs, val_losses_to_plot, color="red", label=val_label)
+
     plt.xlabel("Epochs")
     plt.ylabel(loss_label)
     plt.title(f"Loss vs. Epochs for {dataset_name}")
     plt.legend()
     plt.grid(True)
 
-    # Plot Accuracy (Train vs Validation) with smoothing
+    # Plot Accuracy or Metric (Train vs Validation or Development vs Internal Test)
     plt.subplot(1, 2, 2)
     if task_type == 'classification':
         if model.train_accuracies and len(model.train_accuracies) > 0 and model.val_accuracies and len(model.val_accuracies) > 0:
@@ -99,11 +102,23 @@ def plot_training_curve(model, dataset_name, plot_path=None, task_type=None):
                      '--', color="blue", label="Train Accuracy")
             plt.plot(epochs[:len(smoothed_val_acc)], smoothed_val_acc,
                      color="red", label="Validation Accuracy")
-
         plt.ylabel("Accuracy (%)")
         plt.title(f"Accuracy vs. Epochs for {dataset_name}")
         plt.legend()
         plt.grid(True)
+    elif task_type == 'regression' and hasattr(model, 'val_metrics'):
+        # Plot for CUP dataset (Development vs Internal Test Loss MEE)
+        if "cup" in dataset_name.lower():
+            val_metrics_to_plot = model.val_metrics[:len(epochs)] if hasattr(
+                model, 'val_metrics') else []
+            plt.plot(epochs, val_metrics_to_plot, '--',
+                     color="blue", label="Development Loss (MEE)")
+            plt.plot(epochs, val_losses_to_plot, color="red",
+                     label="Internal Test Loss (MEE)")
+            plt.ylabel("Metric (MEE)")
+            plt.title(f"MEE vs. Epochs for {dataset_name}")
+            plt.legend()
+            plt.grid(True)
 
     plt.xlabel("Epochs")
 
@@ -116,7 +131,6 @@ def plot_training_curve(model, dataset_name, plot_path=None, task_type=None):
     try:
         plt.savefig(plot_path)
         plt.close()
-        print(f"[INFO] Training curve saved to {plot_path}")
     except Exception as e:
         print(f"[ERROR] Failed to save plot: {e}")
 
@@ -154,7 +168,7 @@ def cross_validate_and_train(training_data, validation_data, hyperparams, task_f
 
             # Train the model with current hyperparameters and regularization
             model = task_function((X_train_cv, Y_train_cv),
-                                  (X_val_cv, Y_val_cv), config)
+                                  (X_val_cv, Y_val_cv), config, dataset_name)
             loss, accuracy = evaluate_model(
                 model, X_val_cv, Y_val_cv, task_type)
             fold_losses.append(loss)
@@ -164,15 +178,31 @@ def cross_validate_and_train(training_data, validation_data, hyperparams, task_f
         results.append(
             {"hyperparams": config, "avg_loss": avg_loss, "model": model_for_config})
 
-    # Sort by lowest validation loss and select top 3 models
-    top_results = sorted(results, key=lambda x: x['avg_loss'])[:5]
+    # Sort results by average loss
+    results.sort(key=lambda x: x['avg_loss'])
+
+    # Determine the number of models to return based on the dataset
+    max_models = 5 if dataset_name.lower() == "cup" else 3
+
+    # Filter for unique losses
+    unique_results = []
+    seen_losses = set()
+
+    for result in results:
+        if result['avg_loss'] not in seen_losses:
+            unique_results.append(result)
+            seen_losses.add(result['avg_loss'])
+
+        # Stop once we have the required number of unique results
+        if len(unique_results) >= max_models:
+            break
 
     # Prepare output as lists
-    best_models = [res["model"] for res in top_results]
-    best_hyperparams = [res["hyperparams"] for res in top_results]
+    best_models = [res["model"] for res in unique_results]
+    best_hyperparams = [res["hyperparams"] for res in unique_results]
 
-    print("\n[Top 5 Models Based on Validation Loss]")
-    for rank, res in enumerate(top_results, 1):
+    print(f"\n[Top {max_models} Models Based on Validation Loss]")
+    for rank, res in enumerate(unique_results, 1):
         print(f"[Rank {rank}] Loss: {res['avg_loss']:.6f}")
 
     print(

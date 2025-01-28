@@ -64,39 +64,42 @@ class HyperparameterManager:
                     0.95   # Aggressive momentum
                 ],
                 'epochs': [
-                    500  # For experimentation
+                    1000  # For experimentation
                 ],
                 'weight_decay': [
                     0,  # No regularization for baseline
                     0.00001,  # Minimal L2 weight decay to prevent overfitting
                     0.0001  # Slightly stronger regularization
                 ],
-            },
 
-            'monks-3-l1': {  # Monk-3 with L1 regularization
+            },
+            'monks-3-no-reg': {
                 'hidden_layer_sizes': [
-                    (17, 8, 1),
-                    (17, 12, 6, 1),
-                    (17, 16, 8, 1)
+                    (17, 15, 1),  # Simplest architecture
+                    (17, 12, 6, 1),  # Slightly deeper but still simple
+                    (17, 15, 10, 1)  # Moderate complexity
                 ],
                 'activations': [
-                    ('relu', 'sigmoid'),
-                    ('tanh', 'sigmoid')
+                    ('relu', 'sigmoid'),  # Common and effective
+                    ('tanh', 'sigmoid'),  # Balanced non-linearity
+                    ('tanh', 'relu', 'sigmoid')  # Slightly more depth
                 ],
                 'learning_rates': [
-                    0.001, 0.002, 0.005
+                    0.001,  # For stable convergence
+                    0.002,
+                    0.005  # Slightly faster convergence
                 ],
                 'weight_initialization': [
-                    'xavier', 'he'
+                    'xavier',  # Balanced initialization
+                    'he'  # For better handling of ReLU
                 ],
                 'momentum': [
-                    0.85, 0.9
+                    0.85,  # Balanced momentum
+                    0.9
                 ],
-                'epochs': [500],
-                'regularization': [
-                    ('L1', 0.0001),
-                    ('L1', 0.0005),
-                    ('L1', 0.001)
+                'epochs': [1000],  # Ample epochs for full convergence
+                'weight_decay': [
+                    0  # No regularization
                 ],
             },
             'monks-3-l2': {
@@ -140,21 +143,25 @@ class HyperparameterManager:
             },
             'cup': {
                 'hidden_layer_sizes': [
-                    (12, 8, 3),
-                    (12, 16, 8, 3),
+                    (12, 6, 3),         # Shallower architecture
+                    (12, 8, 4, 3),      # Moderate depth
                 ],
                 'activations': [
-                    ('relu', 'identity'),
-                    ('leaky_relu', 'leaky_relu', 'identity'),
-
+                    ('relu', 'identity'),          # Common activation
+                    ('tanh', 'identity'),          # Diversity with tanh
                 ],
-                'learning_rates': [0.0001, 0.001],
+                # Most impactful learning rates
+                'learning_rates': [0.0005, 0.001],
+                # Retain both initializations
                 'weight_initialization': ['he', 'xavier'],
-                'momentum': [0.2, 0.8],
-                'regularization': [0.0001, 0.001, 0.01],
-                'epochs': [100, 200, 1000],
-                'dropout_rate': [0.1, 0.2],
-            },
+                'momentum': [0.5, 0.9],           # Moderate and high momentum
+                # Most effective regularizations
+                'regularization': [0.0001, 0.0005],
+                'dropout_rate': [0.1, 0.2],       # Two dropout levels
+                # Focus on higher epoch counts
+                'epochs': [200, 500],
+            }
+
         }
         self.dataset_context = None
 

@@ -10,13 +10,13 @@
         "leaky_relu",
         "sigmoid"
     ],
-    "learning_rates": 0.002,
-    "weight_initialization": "xavier",
-    "momentum": 0.85,
+    "learning_rates": 0.001,
+    "weight_initialization": "he",
+    "momentum": 0.95,
     "epochs": 1500,
     "regularization": [
         "L2",
-        0.0001
+        0.0005
     ],
     "regularization_type": "none"
 }

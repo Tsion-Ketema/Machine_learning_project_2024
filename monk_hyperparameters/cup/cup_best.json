@@ -1,7 +1,7 @@
 {
     "hidden_layer_sizes": [
         12,
-        8,
+        6,
         3
     ],
     "activations": [
@@ -10,9 +10,9 @@
     ],
     "learning_rates": 0.001,
     "weight_initialization": "xavier",
-    "momentum": 0.8,
+    "momentum": 0.9,
     "regularization": 0,
-    "epochs": 1000,
-    "dropout_rate": 0.1,
+    "dropout_rate": 0.2,
+    "epochs": 500,
     "regularization_type": "none"
 }
