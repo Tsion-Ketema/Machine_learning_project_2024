@@ -63,7 +63,7 @@ def apply_blind_test(model_path, blind_test_path, output_folder="results"):
 if __name__ == "__main__":
 
     # Define blind test file path
-    best_model_file = "results/best_cup_model.npz"
+    best_model_file = "final_model/best_cup_model.npz"
     blind_test_path = "datasets/CUP/ML-CUP24-TS.csv"
 
     # Apply blind test on the saved model

@@ -2,170 +2,222 @@
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "momentum": 0.9,
         "regularization": [
             "L2",
-            0.0005
-        ]
+            0.0001
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
+        "learning_rates": 0.0003,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.9,
         "regularization": [
             "L2",
-            0.001
-        ]
+            0.0001
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0001
+        ],
+        "epochs": 2000
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            12,
+            6,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "batch_sizes": 16,
         "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
             0.0001
-        ]
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
-            8,
+            12,
+            6,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
             "sigmoid"
         ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "learning_rates": 0.0007,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.8,
         "regularization": [
             "L2",
             0.0001
-        ]
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
-            8,
+            12,
+            6,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.8,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2000
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
             0.0001
-        ]
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.005,
+        "learning_rates": 0.0007,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "momentum": 0.9,
         "regularization": [
             "L2",
-            0.0005
-        ]
+            0.0003
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0007,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0001
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
@@ -176,395 +228,172 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.0023
-        ]
+            0.0003
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.005,
+        "learning_rates": 0.0003,
+        "batch_sizes": 16,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "momentum": 0.9,
         "regularization": [
             "L2",
-            0.001
-        ]
+            0.0003
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
+        "batch_sizes": 16,
         "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.005
-        ]
+            0.0003
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.9,
         "regularization": [
             "L2",
-            0.0023
-        ]
+            0.0003
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
+        "learning_rates": 0.0003,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.0023
-        ]
+            0.0001
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
-            8,
+            12,
+            6,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
+        "batch_sizes": 16,
         "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
-            0.0005
-        ]
+            0.0003
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            12,
-            6,
+            8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.01,
+        "learning_rates": 0.0007,
+        "batch_sizes": 16,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "momentum": 0.8,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.8,
         "regularization": [
             "L2",
             0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
         ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
@@ -575,311 +404,172 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
+        "learning_rates": 0.0007,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.9,
         "regularization": [
             "L2",
-            0.0023
-        ]
+            0.0003
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0007,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.8,
+        "regularization": [
+            "L2",
+            0.0001
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            12,
+            6,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0007,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0001
+        ],
+        "epochs": 2000
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.0005
-        ]
+            0.0001
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
+        "batch_sizes": 16,
         "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
-            0.0001
-        ]
+            0.0003
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
-            8,
+            12,
+            6,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
+        "batch_sizes": 16,
         "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.0023
-        ]
+            0.0003
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
-            8,
+            12,
+            6,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.0005,
+        "learning_rates": 0.0003,
+        "batch_sizes": 16,
         "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
+            0.0001
         ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
@@ -890,101 +580,40 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.01,
+        "learning_rates": 0.0007,
+        "batch_sizes": 16,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.001
-        ]
+            0.0003
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
             "sigmoid"
         ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
+        "learning_rates": 0.0003,
+        "batch_sizes": 16,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.0005
-        ]
+            0.0001
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
@@ -995,38 +624,18 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
             "sigmoid"
         ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
+        "learning_rates": 0.0007,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.0005
-        ]
+            0.0001
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
@@ -1037,122 +646,84 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "batch_sizes": 16,
         "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
             0.0001
-        ]
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            12,
-            6,
+            8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.0005,
+        "learning_rates": 0.0007,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.001
-        ]
+            0.0001
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
             17,
-            12,
-            6,
+            8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "learning_rates": 0.0007,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.001
-        ]
+            0.0001
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            12,
-            6,
+            8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "learning_rates": 0.0003,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.005
-        ]
+            0.0001
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
@@ -1163,17 +734,40 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0007,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.8,
+        "regularization": [
+            "L2",
+            0.0001
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
+        "batch_sizes": 8,
+        "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
-            0.005
-        ]
+            0.0001
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
@@ -1184,101 +778,282 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
+        "learning_rates": 0.0003,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.001
-        ]
+            0.0001
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
-            8,
+            12,
+            6,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0007,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0001
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.8,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            12,
+            6,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0007,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0001
+        ],
+        "epochs": 2000
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.8,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2000
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0007,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.8,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2000
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0007,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            12,
+            6,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0007,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.8,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2000
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            12,
+            6,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0007,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.8,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2000
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            12,
+            6,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0007,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2000
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0007,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.8,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            12,
+            6,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
+        "batch_sizes": 16,
         "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
             0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
         ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
@@ -1289,38 +1064,128 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.01,
+        "learning_rates": 0.0003,
+        "batch_sizes": 8,
         "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
-            0.001
-        ]
+            0.0003
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2000
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            12,
+            6,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0001
+        ],
+        "epochs": 2000
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            12,
+            6,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0001
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0001
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "batch_sizes": 16,
         "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.001
-        ]
+            0.0003
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
@@ -1331,17 +1196,62 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "learning_rates": 0.0007,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.001
-        ]
+            0.0003
+        ],
+        "epochs": 2000
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.8,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2000
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.8,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
@@ -1352,101 +1262,40 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
+        "batch_sizes": 8,
+        "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
-            0.0023
-        ]
+            0.0003
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            12,
-            6,
+            8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.002,
+        "learning_rates": 0.0007,
+        "batch_sizes": 16,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.0023
-        ]
+            0.0001
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
@@ -1457,17 +1306,40 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0007,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            12,
+            6,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
+        "batch_sizes": 16,
+        "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
-            0.0023
-        ]
+            0.0003
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
@@ -1478,227 +1350,62 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.0005,
+        "learning_rates": 0.0003,
+        "batch_sizes": 8,
         "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
-            0.001
-        ]
+            0.0003
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
-            8,
+            12,
+            6,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
             0.0001
-        ]
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
             17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
+        "learning_rates": 0.0007,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
-            0.0005
-        ]
+            0.0001
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
@@ -1709,17 +1416,40 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.8,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2000
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.001
-        ]
+            0.0003
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
@@ -1730,206 +1460,40 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.002,
+        "learning_rates": 0.0003,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
             0.0001
-        ]
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
+        "learning_rates": 0.0003,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
             0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
         ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
@@ -1940,38 +1504,40 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0001
+        ],
+        "epochs": 2000
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "batch_sizes": 16,
         "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
             0.0001
-        ]
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
@@ -1982,122 +1548,84 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "momentum": 0.9,
         "regularization": [
             "L2",
             0.0001
-        ]
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "learning_rates": 0.0007,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.9,
         "regularization": [
             "L2",
-            0.0023
-        ]
+            0.0003
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0007,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0001
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            12,
+            6,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
             0.0001
-        ]
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
@@ -2108,17 +1636,18 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.002,
+        "learning_rates": 0.0003,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.0005
-        ]
+            0.0003
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
@@ -2129,122 +1658,18 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
             "sigmoid"
         ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
+        "learning_rates": 0.0003,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
             0.0001
-        ]
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
@@ -2255,332 +1680,40 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
             "sigmoid"
         ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
+        "learning_rates": 0.0003,
+        "batch_sizes": 16,
         "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
-            0.005
-        ]
+            0.0003
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.9,
         "regularization": [
             "L2",
-            0.0023
-        ]
+            0.0001
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
@@ -2591,59 +1724,40 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.005,
+        "learning_rates": 0.0007,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
+        "momentum": 0.9,
         "regularization": [
             "L2",
             0.0001
-        ]
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
-            8,
+            12,
+            6,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
+        "batch_sizes": 16,
+        "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
-            0.0023
-        ]
+            0.0001
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
@@ -2654,59 +1768,40 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.01,
+        "learning_rates": 0.0007,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.0023
-        ]
+            0.0003
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
             "sigmoid"
         ],
-        "learning_rates": 0.0005,
+        "learning_rates": 0.0007,
+        "batch_sizes": 16,
         "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
-            0.005
-        ]
+            0.0003
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
@@ -2717,143 +1812,18 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
             0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
         ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
@@ -2864,101 +1834,62 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
+        "batch_sizes": 8,
+        "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
-            0.0005
-        ]
+            0.0003
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
             17,
-            12,
-            6,
+            8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "momentum": 0.9,
         "regularization": [
             "L2",
-            0.0023
-        ]
+            0.0003
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "batch_sizes": 16,
         "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
             0.0001
-        ]
+        ],
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
@@ -2969,17 +1900,18 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.01,
+        "learning_rates": 0.0007,
+        "batch_sizes": 16,
         "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.0005
-        ]
+            0.0001
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
@@ -2990,59 +1922,62 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0007,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.9,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.001
-        ]
+            0.0003
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
             17,
-            12,
-            6,
+            8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
+        "learning_rates": 0.0007,
+        "batch_sizes": 8,
+        "weight_initialization": "he",
+        "momentum": 0.9,
         "regularization": [
             "L2",
             0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
         ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
@@ -3053,164 +1988,84 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.001
-        ]
+            0.0003
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
             17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
             8,
+            4,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "batch_sizes": 8,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "momentum": 0.9,
         "regularization": [
             "L2",
-            0.0001
-        ]
+            0.0003
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
             17,
-            16,
-            8,
+            12,
+            6,
             1
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
+            "sigmoid"
+        ],
+        "learning_rates": 0.0003,
+        "batch_sizes": 16,
+        "weight_initialization": "he",
+        "momentum": 0.8,
+        "regularization": [
+            "L2",
+            0.0003
+        ],
+        "epochs": 2500
+    },
+    {
+        "hidden_layer_sizes": [
+            17,
+            8,
+            4,
+            1
+        ],
+        "activations": [
+            "relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "batch_sizes": 16,
         "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.0023
-        ]
+            0.0001
+        ],
+        "epochs": 2500
     },
     {
         "hidden_layer_sizes": [
@@ -3221,80 +2076,18 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
+            "relu",
             "sigmoid"
         ],
         "learning_rates": 0.001,
+        "batch_sizes": 16,
         "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
+        "momentum": 0.8,
         "regularization": [
             "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
+            0.0003
         ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
+        "epochs": 2000
     },
     {
         "hidden_layer_sizes": [
@@ -3305,2998 +2098,17 @@
         ],
         "activations": [
             "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
             "relu",
-            "leaky_relu",
             "sigmoid"
         ],
-        "learning_rates": 0.005,
+        "learning_rates": 0.0003,
+        "batch_sizes": 8,
         "weight_initialization": "he",
         "momentum": 0.9,
-        "epochs": 1500,
         "regularization": [
             "L2",
             0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
         ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "xavier",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.01,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.001,
-        "weight_initialization": "he",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            16,
-            8,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.85,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.001
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.005,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0023
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.002,
-        "weight_initialization": "xavier",
-        "momentum": 0.9,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.0005
-        ]
-    },
-    {
-        "hidden_layer_sizes": [
-            17,
-            12,
-            6,
-            1
-        ],
-        "activations": [
-            "relu",
-            "leaky_relu",
-            "sigmoid"
-        ],
-        "learning_rates": 0.0005,
-        "weight_initialization": "he",
-        "momentum": 0.95,
-        "epochs": 1500,
-        "regularization": [
-            "L2",
-            0.005
-        ]
+        "epochs": 2500
     }
 ]

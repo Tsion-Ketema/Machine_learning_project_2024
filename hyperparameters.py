@@ -40,128 +40,102 @@ class HyperparameterManager:
 
             'monks-2': {
                 'hidden_layer_sizes': [
-                    (17, 4, 1),  # One hidden layer with 4 neurons
-                    (17, 8, 4, 1),  # Two hidden layers with decreasing size
-                    (17, 12, 6, 1)  # Three hidden layers for deeper network
+                    (17, 4, 1),
+                    (17, 8, 4, 1),
+                    (17, 12, 6, 1)
                 ],
                 'activations': [
-                    # ReLU for hidden layers, Sigmoid for output
+
                     ('relu', 'sigmoid'),
                     ('tanh', 'sigmoid')
                 ],
                 'learning_rates': [
-                    0.01,  # Standard learning rate for stable convergence
-                    0.005,  # Slightly lower learning rate to avoid overshooting
-                    0.001  # For finer adjustments
+                    0.01,
+                    0.005,
+                    0.001
                 ],
                 'weight_initialization': [
-                    'xavier',  # Xavier initialization for better weight scaling
-                    'he'  # He initialization for ReLU activations
+                    'xavier',
+                    'he'
                 ],
                 'momentum': [
-                    0.85,  # Balanced momentum for smoothing updates
-                    0.9,   # Higher momentum for faster convergence
-                    0.95   # Aggressive momentum
+                    0.85,
+                    0.9,
+                    0.95
                 ],
                 'epochs': [
-                    1000  # For experimentation
+                    1000
                 ],
                 'weight_decay': [
-                    0,  # No regularization for baseline
-                    0.00001,  # Minimal L2 weight decay to prevent overfitting
-                    0.0001  # Slightly stronger regularization
+                    0,
+                    0.00001,
+                    0.0001
                 ],
 
             },
             'monks-3-no-reg': {
                 'hidden_layer_sizes': [
-                    (17, 15, 1),  # Simplest architecture
-                    (17, 12, 6, 1),  # Slightly deeper but still simple
-                    (17, 15, 10, 1)  # Moderate complexity
-                ],
-                'activations': [
-                    ('relu', 'sigmoid'),  # Common and effective
-                    ('tanh', 'sigmoid'),  # Balanced non-linearity
-                    ('tanh', 'relu', 'sigmoid')  # Slightly more depth
-                ],
-                'learning_rates': [
-                    0.001,  # For stable convergence
-                    0.002,
-                    0.005  # Slightly faster convergence
-                ],
-                'weight_initialization': [
-                    'xavier',  # Balanced initialization
-                    'he'  # For better handling of ReLU
-                ],
-                'momentum': [
-                    0.85,  # Balanced momentum
-                    0.9
-                ],
-                'epochs': [1000],  # Ample epochs for full convergence
-                'weight_decay': [
-                    0  # No regularization
-                ],
-            },
-            'monks-3-l2': {
-                'hidden_layer_sizes': [
+                    (17, 15, 1),
                     (17, 12, 6, 1),
-                    (17, 16, 8, 1),
-                    (17, 24, 12, 6, 1),
-
+                    (17, 15, 10, 1)
                 ],
                 'activations': [
                     ('relu', 'sigmoid'),
                     ('tanh', 'sigmoid'),
-                    ('relu', 'leaky_relu', 'sigmoid')
+                    ('tanh', 'relu', 'sigmoid')
                 ],
                 'learning_rates': [
-                    0.01,   # Faster learning
-                    0.005,  # Balanced convergence
-                    0.002,  # Lower rate for stable optimization
-                    0.001,  # Fine-tuned learning
-                    0.0005  # Very fine-tuned adjustments
+                    0.001,
+                    0.002,
+                    0.005
                 ],
                 'weight_initialization': [
-                    'he',     # Optimized for ReLU
-                    'xavier'  # Balanced for tanh/sigmoid
+                    'xavier',
+                    'he'
                 ],
                 'momentum': [
-                    0.85,  # Standard momentum for stability
-                    0.9,   # High momentum for faster convergence
-                    0.95   # Aggressive smoothing
+                    0.85,
+                    0.9
                 ],
-                'epochs': [
-                    1500   # More training for deeper models
-                ],
-                'regularization': [
-                    ('L2', 0.0001),  # Light regularization
-                    ('L2', 0.0005),  # Moderate
-                    ('L2', 0.001),   # Stronger
-                    ('L2', 0.0023),  # Higher
-                    ('L2', 0.005)    # Strong regularization for complex models
+                'epochs': [1000],
+                'weight_decay': [
+                    0
                 ],
             },
+
+            'monks-3-l2': {
+                'hidden_layer_sizes': [(17, 12, 6, 1), (17, 8, 4, 1)],
+                'activations': [('relu', 'relu', 'sigmoid')],
+                'learning_rates': [0.001, 0.0007, 0.0003],
+                'batch_sizes': [8, 16],
+                'weight_initialization': ['he'],
+                'momentum': [0.8, 0.9],
+                'regularization': [('L2', 0.0001), ('L2', 0.0003)],
+                'epochs': [2000, 2500]
+            },
+
             'cup': {
                 'hidden_layer_sizes': [
-                    (12, 6, 3),         # Shallower architecture
-                    (12, 8, 4, 3),      # Moderate depth
+                    (12, 6, 3),        # Shallower network
+                    (12, 10, 5, 3)     # Moderate depth with smoother transitions
                 ],
                 'activations': [
-                    ('relu', 'identity'),          # Common activation
-                    ('tanh', 'identity'),          # Diversity with tanh
+                    ('tanh', 'identity'),        # Tanh for smoother gradients
+                    ('relu', 'identity')         # ReLU as a robust alternative
                 ],
-                # Most impactful learning rates
-                'learning_rates': [0.0005, 0.001],
-                # Retain both initializations
+                # Finer adjustments
+                'learning_rates': [0.0001, 0.0003, 0.0007],
+                # Optimized initialization
                 'weight_initialization': ['he', 'xavier'],
-                'momentum': [0.5, 0.9],           # Moderate and high momentum
-                # Most effective regularizations
-                'regularization': [0.0001, 0.0005],
-                'dropout_rate': [0.1, 0.2],       # Two dropout levels
-                # Focus on higher epoch counts
-                'epochs': [200, 500],
+                # Balanced momentum
+                'momentum': [0.7, 0.8],
+                # Lighter regularization
+                'regularization': [0.00005, 0.0001],
+                # Reduce or remove dropout
+                'dropout_rate': [0.0, 0.1],
+                # Higher epochs for convergence
+                'epochs': [500, 1000]
             }
-
         }
         self.dataset_context = None
 

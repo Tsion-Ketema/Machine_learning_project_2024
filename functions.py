@@ -61,17 +61,3 @@ def mse_loss(y_true, y_pred):
 def mse_loss_derivative(y_true, y_pred):
     """Derivative of MSE Loss."""
     return 2 * (y_pred - y_true) / y_true.size
-
-
-def cross_entropy_loss(y_true, y_pred):
-    """Cross Entropy Loss for classification tasks."""
-    epsilon = 1e-12  # Avoid log(0)
-    y_pred = np.clip(y_pred, epsilon, 1 - epsilon)
-    return -np.sum(y_true * np.log(y_pred)) / y_true.shape[0]
-
-
-def cross_entropy_loss_derivative(y_true, y_pred):
-    """Derivative of Cross Entropy Loss."""
-    epsilon = 1e-12  # Avoid division by zero
-    y_pred = np.clip(y_pred, epsilon, 1 - epsilon)
-    return -y_true / y_pred

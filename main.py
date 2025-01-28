@@ -63,14 +63,31 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
     # Preparing the data to be trained and validation
     training_data, validation_data = (X_train, Y_train), (X_test, Y_test)
 
+    # Dynamically update hyperparameters for monks-3-l2
+    dynamic_updates = {}
+    if dataset_name == "monks-3-l2":
+        dynamic_updates = {
+            "dropout_rate": 0.2,  # Apply dropout
+            "batch_size": 32,    # Use batch size
+        }
+
     # Generating hyperparameter combination
     hyperparams = generate_hyperparameters(dataset_name, config_file)
+
+    # # Train and evaluate
+    # best_models, best_hyperparams_list = cross_validate_and_train(
+    #     training_data, validation_data, hyperparams,
+    #     taskMonk if "monk" in dataset_name else taskCup,
+    #     train_file, n_folds, task_type
+    # )
 
     # Train and evaluate
     best_models, best_hyperparams_list = cross_validate_and_train(
         training_data, validation_data, hyperparams,
-        taskMonk if "monk" in dataset_name else taskCup,
-        train_file, n_folds, task_type
+        task_function=lambda train_data, val_data, config, dataset_name: taskMonk(
+            train_data, val_data, config, dataset_name, **dynamic_updates
+        ),
+        train_file=train_file, n_folds=n_folds, task_type=task_type
     )
 
     # Save only the required number of models (3 for MONK, 5 for CUP)
@@ -78,12 +95,8 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
     best_hyperparams_list = best_hyperparams_list[:num_models_to_save]
     best_models = best_models[:num_models_to_save]
 
-    # Evaluate the prediction of the entire training and testing data using the best model#
-    best_model = best_models[0]
-    # test_loss, test_accuracy = evaluate_model(
-    #     best_model, X_test, Y_test, task_type)
-
     # Test the best model on the entire training and testing data
+    best_model = best_models[0]
     train_loss = best_model.compute_loss(Y_train, best_model.forward(X_train))
     test_loss = best_model.compute_loss(Y_test, best_model.forward(X_test))
 
@@ -92,7 +105,6 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
         internal_test_loss = best_model.compute_loss(
             Y_test, best_model.forward(X_test))
         print(f"CUP Final Internal Test Loss: {internal_test_loss:.4f}")
-        # Save internal test metric (MEE)
         internal_test_metric = best_model.compute_loss(
             Y_test, best_model.forward(X_test))
         print(
@@ -140,7 +152,6 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
     )
 
     # Save the training curves of the top 5 models
-    # Dynamically iterates over actual models returned
     for i, model in enumerate(best_models):
         model_plot_path = os.path.join(
             plot_folder, f"{dataset_name}_model_{i+1}.png")
@@ -164,34 +175,46 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
     chosen_folder = os.path.join("cup_hyperparameters", "chosen")
     os.makedirs(chosen_folder, exist_ok=True)
 
-    # Dynamically iterate over returned hyperparams
     for i, hyperparams in enumerate(best_hyperparams_list):
         chosen_file = os.path.join(chosen_folder, f"cup_model{i+1}.json")
         with open(chosen_file, 'w') as f:
             json.dump(hyperparams, f, indent=4)
 
     # Save final results of the best model and its corresponding json file
-    os.makedirs("results", exist_ok=True)
+    os.makedirs("final_model", exist_ok=True)  # Ensure the directory exists
+
     best_hp_file = os.path.join(
-        "results", f"best_{dataset_name}_hyperparameters.json")
-    best_model_file = os.path.join("results", f"best_{dataset_name}_model.npz")
+        "final_model", f"best_{dataset_name}_hyperparameters.json")
+    best_model_file = os.path.join(
+        "final_model", f"best_{dataset_name}_model.npz")
 
     with open(best_hp_file, 'w') as f:
         json.dump(best_hyperparams_list[0], f, indent=4)
     best_model.save_model(best_model_file)
 
-    if "cup" in dataset_name:
-        internal_test_metrics = best_model.val_metrics
-        # Save metrics to a file for further analysis
-        with open(os.path.join(plot_folder, f"{dataset_name}_metrics.json"), 'w') as f:
-            json.dump({
-                "internal_test_metrics": internal_test_metrics,
-            }, f, indent=4)
+    # if "cup" in dataset_name:
+    #     internal_test_metrics = best_model.val_metrics
+    #     with open(os.path.join(plot_folder, f"{dataset_name}_metrics.json"), 'w') as f:
+    #         json.dump({
+    #             "internal_test_metrics": internal_test_metrics,
+    #         }, f, indent=4)
+
+    if "cup" in dataset_name:  # CUP dataset-specific handling
+        if hasattr(best_model, 'val_metrics'):  # Check if val_metrics exists
+            internal_test_metrics = best_model.val_metrics
+            # Save metrics to a file for further analysis
+            with open(os.path.join(plot_folder, f"{dataset_name}_metrics.json"), 'w') as f:
+                json.dump({
+                    "internal_test_metrics": internal_test_metrics,
+                }, f, indent=4)
+        else:
+            print(
+                f"[WARNING] No val_metrics attribute found for {dataset_name}.")
 
 
 if __name__ == "__main__":
     RUN_MONK = True  # Set to False to run CUP instead
-    MONK_VERSION = "monks-1"  # Choose among "monks-1", "monks-2", "monks-3"
+    MONK_VERSION = "monks-3"  # Choose among "monks-1", "monks-2", "monks-3"
 
     if RUN_MONK:
         if MONK_VERSION == "monks-3":
@@ -199,7 +222,7 @@ if __name__ == "__main__":
             # process_dataset("monks-3-no-reg", f"datasets/monk/monks-3.train",
             #                 f"datasets/monk/monks-3.test", n_folds=5, task_type='classification')
 
-            # Process with L2 regularization
+            # # Process with L2 regularization
             process_dataset("monks-3-l2", f"datasets/monk/monks-3.train",
                             f"datasets/monk/monks-3.test", n_folds=5, task_type='classification')
         else:

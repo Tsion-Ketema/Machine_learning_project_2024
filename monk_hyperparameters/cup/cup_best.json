@@ -8,11 +8,11 @@
         "relu",
         "identity"
     ],
-    "learning_rates": 0.001,
+    "learning_rates": 0.0007,
     "weight_initialization": "xavier",
-    "momentum": 0.9,
+    "momentum": 0.8,
     "regularization": 0,
-    "dropout_rate": 0.2,
-    "epochs": 500,
+    "dropout_rate": 0.0,
+    "epochs": 1000,
     "regularization_type": "none"
 }

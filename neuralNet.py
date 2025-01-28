@@ -5,7 +5,11 @@ from functions import activation_map
 
 class NeuralNetwork:
     def __init__(self, hidden_layer_sizes, learning_rate, epochs, momentum,
-                 weight_initialization, regularization=None, activations=None, task_type='classification'):
+                 weight_initialization, regularization=None, activations=None, task_type='classification',
+                 dataset_name=None, dropout_rate=0.0):
+        """
+        Initialize the neural network with dynamic dropout support for Monk-3.
+        """
         self.hidden_layer_sizes = hidden_layer_sizes
         self.learning_rate = learning_rate
         self.epochs = epochs
@@ -14,6 +18,9 @@ class NeuralNetwork:
         self.task_type = task_type
         self.regularization = regularization or (
             'none', 0)  # Default no regularization
+        self.dataset_name = dataset_name  # Track the dataset name
+        # Apply dropout only for monks-3-l2
+        self.dropout_rate = dropout_rate if dataset_name == 'monks-3-l2' else 0.0
 
         self.activations = self._initialize_activations(activations)
         self.activation_functions, self.derivative_functions = self._get_activation_functions()
@@ -22,6 +29,9 @@ class NeuralNetwork:
         self.train_losses, self.val_losses = [], []
         self.train_accuracies, self.val_accuracies = ([] if self.task_type == 'classification' else None,
                                                       [] if self.task_type == 'classification' else None)
+
+        # Initialize val_metrics as an empty list
+        self.val_metrics = [] if self.task_type == 'regression' else None
 
     def _initialize_activations(self, activations):
         """Initialize activations based on task type if not provided."""
@@ -68,12 +78,25 @@ class NeuralNetwork:
             self.velocity_b.append(np.zeros_like(b))
 
     def forward(self, X):
-        """Perform forward propagation."""
+        """
+        Perform forward propagation with conditional dropout.
+        Dropout is applied only for monks-3-l2.
+        """
         self.a_cache, self.z_cache = [X], []
-        for W, b, act in zip(self.weights, self.biases, self.activation_functions):
+        for i, (W, b, act) in enumerate(zip(self.weights, self.biases, self.activation_functions)):
             z = np.dot(self.a_cache[-1], W) + b
             self.z_cache.append(z)
-            self.a_cache.append(act(z))
+            a = act(z)
+
+            # Apply dropout if enabled and not the output layer
+            if self.dataset_name == 'monks-3-l2' and self.dropout_rate > 0 and i < len(self.weights) - 1:
+                mask = np.random.binomial(
+                    1, 1 - self.dropout_rate, size=a.shape)
+                a *= mask  # Zero-out some activations
+                # Scale remaining activations to maintain magnitude
+                a /= (1 - self.dropout_rate)
+
+            self.a_cache.append(a)
         return self.a_cache[-1]
 
     def compute_loss(self, y_true, y_pred):
@@ -127,42 +150,55 @@ class NeuralNetwork:
     def train(self, X, y, X_val=None, y_val=None):
         """Train the neural network with the provided data."""
         for epoch in range(self.epochs):
+            # Forward pass
             self.forward(X)
+
+            # Backpropagation to compute gradients
             grads_w, grads_b = self.backward(X, y)
 
             for i in range(len(self.weights)):
+                # Incorporate regularization into the gradients
+                if self.regularization[0] == 'L2':
+                    grads_w[i] += 2 * self.regularization[1] * self.weights[i]
+                elif self.regularization[0] == 'L1':
+                    grads_w[i] += self.regularization[1] * \
+                        np.sign(self.weights[i])
+
+                # Momentum-based weight updates
                 self.velocity_w[i] = self.momentum * \
                     self.velocity_w[i] - self.learning_rate * grads_w[i]
                 self.velocity_b[i] = self.momentum * \
                     self.velocity_b[i] - self.learning_rate * grads_b[i]
+
+                # Update weights and biases
                 self.weights[i] += self.velocity_w[i]
                 self.biases[i] += self.velocity_b[i]
 
-            # Store train loss and accuracy
+            # Compute and store training loss
             train_loss = self.compute_loss(y, self.forward(X))
             self.train_losses.append(train_loss)
 
             if self.task_type == 'classification':
+                # Compute and store training accuracy
                 train_acc = self._compute_accuracy(y, self.forward(X))
                 self.train_accuracies.append(train_acc)
 
+            # Compute and store validation loss and accuracy if validation data is provided
             if X_val is not None and y_val is not None:
                 val_loss = self.compute_loss(y_val, self.forward(X_val))
                 self.val_losses.append(val_loss)
 
-                if X_val is not None and y_val is not None:
-                    val_loss = self.compute_loss(y_val, self.forward(X_val))
-                    self.val_losses.append(val_loss)
+                if self.task_type == 'regression' and X_val is not None and y_val is not None:
+                    val_mee = np.mean(
+                        np.sqrt(np.sum((y_val - self.forward(X_val)) ** 2, axis=1)))
 
-                    if self.task_type == 'regression':
-                        val_mee = np.mean(
-                            np.sqrt(np.sum((y_val - self.forward(X_val)) ** 2, axis=1)))
-                        if hasattr(self, 'val_metrics'):
-                            self.val_metrics.append(val_mee)
-                        else:
-                            self.val_metrics = [val_mee]
+                    if not hasattr(self, 'val_metrics') or self.val_metrics is None:
+                        self.val_metrics = []  # Ensure val_metrics is initialized
 
-                if self.task_type == 'classification':
+                    self.val_metrics.append(val_mee)
+
+                elif self.task_type == 'classification':
+                    # Compute and store validation accuracy
                     val_acc = self._compute_accuracy(
                         y_val, self.forward(X_val))
                     if self.val_accuracies is not None:
@@ -201,29 +237,32 @@ class NeuralNetwork:
                  **{f"weight_{i}": W for i, W in enumerate(self.weights)},
                  **{f"bias_{i}": b for i, b in enumerate(self.biases)})
 
-    @classmethod
-    def load_model(cls, file_name):
-        """Load the neural network model (weights, biases, and attributes) from an .npz file."""
-        with np.load(file_name, allow_pickle=True) as data:
-            hidden_layer_sizes = data['hidden_layer_sizes'].tolist()
-            activations = data['activations'].tolist()
-            learning_rate = float(data['learning_rate'])
-            epochs = int(data['epochs'])
-            momentum = float(data['momentum'])
-            weight_initialization = str(data['weight_initialization'])
+        print(f"[INFO] Model saved to {file_name}")
 
-            regularization = tuple(data['regularization']) if isinstance(
-                data['regularization'], np.ndarray) else data['regularization']
 
-            model = cls(hidden_layer_sizes, learning_rate, epochs, momentum,
-                        weight_initialization, regularization, activations)
+@classmethod
+def load_model(cls, file_name):
+    """Load the neural network model (weights, biases, and attributes) from an .npz file."""
+    with np.load(file_name, allow_pickle=True) as data:
+        hidden_layer_sizes = data['hidden_layer_sizes'].tolist()
+        activations = data['activations'].tolist()
+        learning_rate = float(data['learning_rate'])
+        epochs = int(data['epochs'])
+        momentum = float(data['momentum'])
+        weight_initialization = str(data['weight_initialization'])
 
-            model.weights = [data[f"weight_{i}"]
-                             for i in range(len(hidden_layer_sizes) - 1)]
-            model.biases = [data[f"bias_{i}"]
-                            for i in range(len(hidden_layer_sizes) - 1)]
+        regularization = tuple(data['regularization']) if isinstance(
+            data['regularization'], np.ndarray) else data['regularization']
 
-            print(f"[INFO] Model loaded from {file_name}")
-            print(f"[INFO] Regularization applied: {model.regularization}")
+        model = cls(hidden_layer_sizes, learning_rate, epochs, momentum,
+                    weight_initialization, regularization, activations)
 
-        return model
+        model.weights = [data[f"weight_{i}"]
+                         for i in range(len(hidden_layer_sizes) - 1)]
+        model.biases = [data[f"bias_{i}"]
+                        for i in range(len(hidden_layer_sizes) - 1)]
+
+        print(f"[INFO] Model loaded from {file_name}")
+        print(f"[INFO] Regularization applied: {model.regularization}")
+
+    return model

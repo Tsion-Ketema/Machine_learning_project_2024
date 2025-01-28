@@ -6,7 +6,7 @@ from neuralNet import *
 
 
 def extract_dataset_name(train_file):
-    """Extract dataset name from the train file path."""
+    """Extract d36ataset name from the train file path."""
     return os.path.basename(train_file).split('.')[0]
 
 
@@ -106,19 +106,24 @@ def plot_training_curve(model, dataset_name, plot_path=None, task_type=None):
         plt.title(f"Accuracy vs. Epochs for {dataset_name}")
         plt.legend()
         plt.grid(True)
-    elif task_type == 'regression' and hasattr(model, 'val_metrics'):
-        # Plot for CUP dataset (Development vs Internal Test Loss MEE)
-        if "cup" in dataset_name.lower():
-            val_metrics_to_plot = model.val_metrics[:len(epochs)] if hasattr(
-                model, 'val_metrics') else []
-            plt.plot(epochs, val_metrics_to_plot, '--',
-                     color="blue", label="Development Loss (MEE)")
-            plt.plot(epochs, val_losses_to_plot, color="red",
-                     label="Internal Test Loss (MEE)")
-            plt.ylabel("Metric (MEE)")
-            plt.title(f"MEE vs. Epochs for {dataset_name}")
-            plt.legend()
-            plt.grid(True)
+    elif task_type == 'regression' and model.val_metrics:
+        val_metrics_to_plot = model.val_metrics[:len(epochs)]
+        # Ensure both are of same length
+        val_losses_to_plot = model.val_losses[:len(epochs)]
+
+        plt.plot(epochs[:len(val_metrics_to_plot)], val_metrics_to_plot, '--',
+                 color="blue", label="Development Loss (MEE)")
+        plt.plot(epochs[:len(val_losses_to_plot)], val_losses_to_plot, color="red",
+                 label="Internal Test Loss (MEE)")
+
+        plt.ylabel("Metric (MEE)")
+        plt.title(f"MEE vs. Epochs for {dataset_name}")
+        plt.legend()
+        plt.grid(True)
+
+    else:
+        print(
+            f"[WARNING] Skipping val_metrics plot for {dataset_name} as it does not exist or is empty.")
 
     plt.xlabel("Epochs")
 
