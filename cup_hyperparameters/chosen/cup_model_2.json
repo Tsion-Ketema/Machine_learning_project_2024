@@ -10,7 +10,7 @@
     ],
     "learning_rates": 0.001,
     "weight_initialization": "xavier",
-    "momentum": 0.7,
+    "momentum": 0.6,
     "regularization": 0,
     "dropout_rate": 0.0,
     "epochs": 1000,

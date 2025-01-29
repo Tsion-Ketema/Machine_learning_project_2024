@@ -116,26 +116,26 @@ class HyperparameterManager:
 
             'cup': {
                 'hidden_layer_sizes': [
-                    (12, 6, 3),        # Shallower network
-                    (12, 10, 5, 3)     # Moderate depth with smoother transitions
+                    (12, 6, 3),        # Shallow network
+                    (12, 10, 6, 3)     # Slightly deeper for feature extraction
                 ],
                 'activations': [
-                    ('tanh', 'identity'),        # Tanh for smoother gradients
+                    ('tanh', 'identity'),        # Smooth gradients
                     ('relu', 'identity')         # ReLU as a robust alternative
                 ],
-                # Finer adjustments
-                'learning_rates': [0.0001, 0.0003, 0.0007],
-                # Optimized initialization
-                'weight_initialization': ['he', 'xavier'],
-                # Balanced momentum
-                'momentum': [0.7, 0.8],
-                # Lighter regularization
-                'regularization': [0.00005, 0.0001],
-                # Reduce or remove dropout
-                'dropout_rate': [0.0, 0.1],
-                # Higher epochs for convergence
-                'epochs': [500, 1000]
+                # Balanced learning rates
+                'learning_rates': [0.0001, 0.0003, 0.001],
+                # Reduced to 3
+                'weight_initialization': ['he', 'xavier', 'lecun'],
+                'momentum': [0.6, 0.7],   # Keep 2 values
+                'regularization': [
+                    ('L2', 0.00005),    # Light L2
+                    ('L2', 0.0001)      # Slightly stronger L2
+                ],
+                'dropout_rate': [0.0],   # Keep fixed at 0.0
+                'epochs': [500, 1000]   # Two training durations
             }
+
         }
         self.dataset_context = None
 

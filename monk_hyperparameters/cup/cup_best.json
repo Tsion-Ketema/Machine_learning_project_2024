@@ -8,9 +8,9 @@
         "relu",
         "identity"
     ],
-    "learning_rates": 0.0007,
+    "learning_rates": 0.001,
     "weight_initialization": "xavier",
-    "momentum": 0.8,
+    "momentum": 0.7,
     "regularization": 0,
     "dropout_rate": 0.0,
     "epochs": 1000,

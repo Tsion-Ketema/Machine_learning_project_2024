@@ -16,7 +16,7 @@ def setup_directories(base_folder, subfolders):
     return {name: os.makedirs(os.path.join(base_folder, name), exist_ok=True) or os.path.join(base_folder, name)
             for name in subfolders}
 
-# ***************** Initiating hyperparamter combination generating funciton *****************
+# ***************** Initiating hyperparameter combination generating function *****************
 
 
 def generate_hyperparameters(dataset_name, config_file):
@@ -30,7 +30,7 @@ def generate_hyperparameters(dataset_name, config_file):
     with open(config_file, "r") as f:
         return json.load(f)
 
-# ***************** Load dataset /setting up hyperparamters/ cross validation initiation *****************
+# ***************** Load dataset / setting up hyperparameters / cross-validation initiation *****************
 
 
 def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_type='classification'):
@@ -74,18 +74,13 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
     # Generating hyperparameter combination
     hyperparams = generate_hyperparameters(dataset_name, config_file)
 
-    # # Train and evaluate
-    # best_models, best_hyperparams_list = cross_validate_and_train(
-    #     training_data, validation_data, hyperparams,
-    #     taskMonk if "monk" in dataset_name else taskCup,
-    #     train_file, n_folds, task_type
-    # )
-
     # Train and evaluate
     best_models, best_hyperparams_list = cross_validate_and_train(
         training_data, validation_data, hyperparams,
-        task_function=lambda train_data, val_data, config, dataset_name: taskMonk(
-            train_data, val_data, config, dataset_name, **dynamic_updates
+        task_function=lambda train_data, val_data, config, dataset_name: (
+            taskMonk(train_data, val_data, config,
+                     dataset_name, **dynamic_updates)
+            if "monk" in dataset_name else taskCup(train_data, val_data, config, dataset_name)
         ),
         train_file=train_file, n_folds=n_folds, task_type=task_type
     )
@@ -99,16 +94,6 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
     best_model = best_models[0]
     train_loss = best_model.compute_loss(Y_train, best_model.forward(X_train))
     test_loss = best_model.compute_loss(Y_test, best_model.forward(X_test))
-
-    # Evaluate on the internal test set for CUP
-    if "cup" in dataset_name:
-        internal_test_loss = best_model.compute_loss(
-            Y_test, best_model.forward(X_test))
-        print(f"CUP Final Internal Test Loss: {internal_test_loss:.4f}")
-        internal_test_metric = best_model.compute_loss(
-            Y_test, best_model.forward(X_test))
-        print(
-            f"CUP Final Internal Test Metric (MEE): {internal_test_metric:.4f}")
 
     print("**************************************")
 
@@ -135,85 +120,52 @@ def process_dataset(dataset_name, train_file, test_file=None, n_folds=5, task_ty
 
     print("**************************************")
 
-    # Plot only the best model (the first model in the sorted best_models list)
-    best_model = best_models[0]  # Select the model with the lowest avg loss
-    best_hyperparams = best_hyperparams_list[0]
+    # Debugging: Ensure val_metrics is retained
+    if hasattr(best_model, 'val_metrics') and best_model.val_metrics:
+        print(
+            f"[DEBUG] Final val_metrics length: {len(best_model.val_metrics)}")
+        print(
+            f"[DEBUG] val_metrics (Development Loss - First 5): {best_model.val_metrics[:5]}")
+    else:
+        print("[WARNING] val_metrics is empty! Check training process.")
 
-    # Save the training curve of the best model only
+    # Plot only the best model (the first model in the sorted best_models list)
     plot_folder = os.path.join(
         "plot", "monk" if "monk" in dataset_name else "cup"
     )
     os.makedirs(plot_folder, exist_ok=True)
 
-    # Save the plot for the best model
-    plot_path = os.path.join(plot_folder, f"{dataset_name}_best_model.png")
-    plot_training_curve(
-        best_model, dataset_name=f"{dataset_name}_best", plot_path=plot_path, task_type=task_type
-    )
-
-    # Save the training curves of the top 5 models
+    # Save plots for all top models
+   # Save plots for all top models, marking the best one
     for i, model in enumerate(best_models):
-        model_plot_path = os.path.join(
-            plot_folder, f"{dataset_name}_model_{i+1}.png")
+        if i == 0:
+            model_name = f"{dataset_name}_model_{i+1}_best"  # Best model
+        else:
+            model_name = f"{dataset_name}_model_{i+1}"  # Other top models
+
+        plot_path = os.path.join(plot_folder, f"{model_name}.png")
+
         plot_training_curve(
-            model, dataset_name=f"{dataset_name}_model_{i+1}", plot_path=model_plot_path, task_type=task_type
+            model, dataset_name=model_name, plot_path=plot_path, task_type=task_type
         )
 
-    # Save only the best hyperparameters under chosen folder
-    chosen_folder = paths.get(dataset_name, os.path.join(
-        "monk_hyperparameters", dataset_name))
-    os.makedirs(chosen_folder, exist_ok=True)
+    print(f"[INFO] Saved training plot for {model_name} at {plot_path}")
 
-    chosen_file = os.path.join(chosen_folder, f"{dataset_name}_best.json")
+    if "cup" in dataset_name:
+        chosen_folder = os.path.join("cup_hyperparameters", "chosen")
+        os.makedirs(chosen_folder, exist_ok=True)
 
-    with open(chosen_file, 'w') as f:
-        json.dump(best_hyperparams, f, indent=4)
+        for i, hyperparams in enumerate(best_hyperparams_list):
+            chosen_file = os.path.join(chosen_folder, f"cup_model_{i+1}.json")
+            with open(chosen_file, 'w') as f:
+                json.dump(hyperparams, f, indent=4)
 
-    print(f"[INFO] The best model hyperparameters saved to {chosen_file}")
-
-    # Save top 5 models' hyperparameters in the chosen folder inside cup_hyperparameters
-    chosen_folder = os.path.join("cup_hyperparameters", "chosen")
-    os.makedirs(chosen_folder, exist_ok=True)
-
-    for i, hyperparams in enumerate(best_hyperparams_list):
-        chosen_file = os.path.join(chosen_folder, f"cup_model{i+1}.json")
-        with open(chosen_file, 'w') as f:
-            json.dump(hyperparams, f, indent=4)
-
-    # Save final results of the best model and its corresponding json file
-    os.makedirs("final_model", exist_ok=True)  # Ensure the directory exists
-
-    best_hp_file = os.path.join(
-        "final_model", f"best_{dataset_name}_hyperparameters.json")
-    best_model_file = os.path.join(
-        "final_model", f"best_{dataset_name}_model.npz")
-
-    with open(best_hp_file, 'w') as f:
-        json.dump(best_hyperparams_list[0], f, indent=4)
-    best_model.save_model(best_model_file)
-
-    # if "cup" in dataset_name:
-    #     internal_test_metrics = best_model.val_metrics
-    #     with open(os.path.join(plot_folder, f"{dataset_name}_metrics.json"), 'w') as f:
-    #         json.dump({
-    #             "internal_test_metrics": internal_test_metrics,
-    #         }, f, indent=4)
-
-    if "cup" in dataset_name:  # CUP dataset-specific handling
-        if hasattr(best_model, 'val_metrics'):  # Check if val_metrics exists
-            internal_test_metrics = best_model.val_metrics
-            # Save metrics to a file for further analysis
-            with open(os.path.join(plot_folder, f"{dataset_name}_metrics.json"), 'w') as f:
-                json.dump({
-                    "internal_test_metrics": internal_test_metrics,
-                }, f, indent=4)
-        else:
-            print(
-                f"[WARNING] No val_metrics attribute found for {dataset_name}.")
+        print(
+            f"[INFO] Saved hyperparameters for top 5 models in {chosen_folder}")
 
 
 if __name__ == "__main__":
-    RUN_MONK = True  # Set to False to run CUP instead
+    RUN_MONK = False  # Set to False to run CUP instead
     MONK_VERSION = "monks-3"  # Choose among "monks-1", "monks-2", "monks-3"
 
     if RUN_MONK:

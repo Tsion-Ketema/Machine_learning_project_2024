@@ -188,21 +188,21 @@ class NeuralNetwork:
                 val_loss = self.compute_loss(y_val, self.forward(X_val))
                 self.val_losses.append(val_loss)
 
-                if self.task_type == 'regression' and X_val is not None and y_val is not None:
+                if self.task_type == 'regression':
                     val_mee = np.mean(
                         np.sqrt(np.sum((y_val - self.forward(X_val)) ** 2, axis=1)))
 
-                    if not hasattr(self, 'val_metrics') or self.val_metrics is None:
-                        self.val_metrics = []  # Ensure val_metrics is initialized
+                    # Ensure val_metrics is initialized properly
+                    if self.val_metrics is None:
+                        self.val_metrics = []
 
                     self.val_metrics.append(val_mee)
 
-                elif self.task_type == 'classification':
-                    # Compute and store validation accuracy
-                    val_acc = self._compute_accuracy(
-                        y_val, self.forward(X_val))
-                    if self.val_accuracies is not None:
-                        self.val_accuracies.append(val_acc)
+            if self.task_type == 'classification':
+                val_acc = self._compute_accuracy(
+                    y_val, self.forward(X_val))
+                if self.val_accuracies is not None:
+                    self.val_accuracies.append(val_acc)
 
     def _compute_accuracy(self, y_true, y_pred):
         """Compute classification accuracy safely."""
@@ -239,30 +239,28 @@ class NeuralNetwork:
 
         print(f"[INFO] Model saved to {file_name}")
 
+    @classmethod
+    def load_model(cls, file_name):
+        """Load the neural network model (weights, biases, and attributes) from an .npz file."""
+        with np.load(file_name, allow_pickle=True) as data:
+            hidden_layer_sizes = data['hidden_layer_sizes'].tolist()
+            activations = data['activations'].tolist()
+            learning_rate = float(data['learning_rate'])
+            epochs = int(data['epochs'])
+            momentum = float(data['momentum'])
+            weight_initialization = str(data['weight_initialization'])
 
-@classmethod
-def load_model(cls, file_name):
-    """Load the neural network model (weights, biases, and attributes) from an .npz file."""
-    with np.load(file_name, allow_pickle=True) as data:
-        hidden_layer_sizes = data['hidden_layer_sizes'].tolist()
-        activations = data['activations'].tolist()
-        learning_rate = float(data['learning_rate'])
-        epochs = int(data['epochs'])
-        momentum = float(data['momentum'])
-        weight_initialization = str(data['weight_initialization'])
+            regularization = tuple(data['regularization']) if isinstance(
+                data['regularization'], np.ndarray) else data['regularization']
 
-        regularization = tuple(data['regularization']) if isinstance(
-            data['regularization'], np.ndarray) else data['regularization']
+            model = cls(hidden_layer_sizes, learning_rate, epochs, momentum,
+                        weight_initialization, regularization, activations)
 
-        model = cls(hidden_layer_sizes, learning_rate, epochs, momentum,
-                    weight_initialization, regularization, activations)
+            model.weights = [data[f"weight_{i}"]
+                             for i in range(len(hidden_layer_sizes) - 1)]
+            model.biases = [data[f"bias_{i}"]
+                            for i in range(len(hidden_layer_sizes) - 1)]
 
-        model.weights = [data[f"weight_{i}"]
-                         for i in range(len(hidden_layer_sizes) - 1)]
-        model.biases = [data[f"bias_{i}"]
-                        for i in range(len(hidden_layer_sizes) - 1)]
+            print(f"[INFO] Model loaded from {file_name}")
 
-        print(f"[INFO] Model loaded from {file_name}")
-        print(f"[INFO] Regularization applied: {model.regularization}")
-
-    return model
+        return model

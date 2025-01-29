@@ -50,7 +50,7 @@ def moving_average(data, window_size=10):
 
 def plot_training_curve(model, dataset_name, plot_path=None, task_type=None):
     """
-    Plots training and validation loss and accuracy curves.
+    Plots training and validation loss curves for classification and regression.
 
     Parameters:
     - model: Trained neural network model
@@ -68,15 +68,14 @@ def plot_training_curve(model, dataset_name, plot_path=None, task_type=None):
         return
 
     epochs = range(1, len(model.train_losses) + 1)
-    plt.figure(figsize=(14, 6))
+    plt.figure(figsize=(7, 5))  # Single plot layout for better visualization
 
     # Determine the appropriate loss label
     loss_label = "Loss (MSE)" if task_type == 'classification' else "Loss (MEE)"
     train_label = "Train Loss (MSE)" if task_type == 'classification' else "Train Loss (MEE)"
     val_label = "Validation Loss (MSE)" if task_type == 'classification' else "Validation Loss (MEE)"
 
-    # Plot Loss (Train vs Validation)
-    plt.subplot(1, 2, 1)
+    # Plot Train vs Validation Loss
     plt.plot(epochs, model.train_losses, '--', color="blue", label=train_label)
 
     # Adjust validation loss length to match epochs
@@ -89,44 +88,7 @@ def plot_training_curve(model, dataset_name, plot_path=None, task_type=None):
     plt.legend()
     plt.grid(True)
 
-    # Plot Accuracy or Metric (Train vs Validation or Development vs Internal Test)
-    plt.subplot(1, 2, 2)
-    if task_type == 'classification':
-        if model.train_accuracies and len(model.train_accuracies) > 0 and model.val_accuracies and len(model.val_accuracies) > 0:
-            smoothed_train_acc = moving_average(
-                model.train_accuracies, window_size=10)
-            smoothed_val_acc = moving_average(
-                model.val_accuracies, window_size=10)
-
-            plt.plot(epochs[:len(smoothed_train_acc)], smoothed_train_acc,
-                     '--', color="blue", label="Train Accuracy")
-            plt.plot(epochs[:len(smoothed_val_acc)], smoothed_val_acc,
-                     color="red", label="Validation Accuracy")
-        plt.ylabel("Accuracy (%)")
-        plt.title(f"Accuracy vs. Epochs for {dataset_name}")
-        plt.legend()
-        plt.grid(True)
-    elif task_type == 'regression' and model.val_metrics:
-        val_metrics_to_plot = model.val_metrics[:len(epochs)]
-        # Ensure both are of same length
-        val_losses_to_plot = model.val_losses[:len(epochs)]
-
-        plt.plot(epochs[:len(val_metrics_to_plot)], val_metrics_to_plot, '--',
-                 color="blue", label="Development Loss (MEE)")
-        plt.plot(epochs[:len(val_losses_to_plot)], val_losses_to_plot, color="red",
-                 label="Internal Test Loss (MEE)")
-
-        plt.ylabel("Metric (MEE)")
-        plt.title(f"MEE vs. Epochs for {dataset_name}")
-        plt.legend()
-        plt.grid(True)
-
-    else:
-        print(
-            f"[WARNING] Skipping val_metrics plot for {dataset_name} as it does not exist or is empty.")
-
-    plt.xlabel("Epochs")
-
+    # Save or Show the Plot
     if plot_path is None:
         plot_folder = "plots"
         os.makedirs(plot_folder, exist_ok=True)
@@ -136,6 +98,7 @@ def plot_training_curve(model, dataset_name, plot_path=None, task_type=None):
     try:
         plt.savefig(plot_path)
         plt.close()
+        print(f"[INFO] Plot saved to {plot_path}")
     except Exception as e:
         print(f"[ERROR] Failed to save plot: {e}")
 
